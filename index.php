@@ -9,12 +9,12 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package inkshades
+ * @package playon
  */
 
 get_header(); ?>
 
-	<div id="primary" class="content-area <?php do_action('inkshades_primary-width') ?>">
+	<div id="primary" class="content-area <?php do_action('playon_primary-width') ?>">
 		<main id="main" class="site-main">
 
 		<?php
@@ -39,12 +39,12 @@ get_header(); ?>
 //				get_template_part( 'template-parts/content', get_post_format() );
 				/* Include the Post-Format-specific template for the content.
 					 */
-				do_action('inkshades_blog_layout');
+				do_action('playon_blog_layout');
 
 
 			endwhile;
 
-			inkshades_pagination();
+			playon_pagination();
 		else :
 
 			get_template_part( 'modules/content/content', 'none' );

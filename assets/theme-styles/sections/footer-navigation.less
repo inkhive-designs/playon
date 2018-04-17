@@ -1,0 +1,30 @@
+@media screen and (max-width: 767px) {
+  .footer-menu-wrapper {
+    display: none;
+  }
+  }
+  .footer-menu-wrapper {
+    margin-bottom: 26px;
+    text-align: center;
+    position: relative;
+    padding: 20px 0px;
+    ul {
+      display: inline-block !important;
+      li {
+        ul.children {
+          display: none !important;
+        }
+        a {
+          padding: 0px 15px;
+          &:hover{
+            color: @highlight-bg;
+          }
+        }
+        &:hover {
+          ul.children {
+            display: none !important;
+          }
+        }
+      }
+    }
+  }

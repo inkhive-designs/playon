@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package inkshades
+ * @package playon
  */
 
 ?>
@@ -15,7 +15,7 @@
 
         <?php if ( 'post' === get_post_type() ) : ?>
             <div class="entry-meta">
-                <?php inkshades_posted_on(); ?>
+                <?php playon_posted_on(); ?>
             </div><!-- .entry-meta -->
         <?php endif; ?>
     </header><!-- .entry-header -->
@@ -25,6 +25,6 @@
     </div><!-- .entry-summary -->
 
     <footer class="entry-footer">
-        <?php inkshades_entry_modified_footer(); ?>
+        <?php playon_entry_modified_footer(); ?>
     </footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

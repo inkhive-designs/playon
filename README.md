@@ -1,4 +1,4 @@
-# Inkshades
+# Playon
 
 **Contributors:** (inkhive)
 **Requires at least:** WordPress 4.4
@@ -11,8 +11,8 @@
 
 ## Description
 
-Inkshades is a unique, ultra creative multipurpose WordPress theme. Inkshades supports all basic features and is fully mobile friendly. And with Support for Custom Widgets, Featured Posts section, etc you can make this theme look even more beautiful on your website. 
-Demo Here: http://demo.inkhive.com/inkshades/
+Playon is a unique, ultra creative multipurpose WordPress theme. Playon supports all basic features and is fully mobile friendly. And with Support for Custom Widgets, Featured Posts section, etc you can make this theme look even more beautiful on your website. 
+Demo Here: http://demo.inkhive.com/playon/
 
 ## Copyright
 

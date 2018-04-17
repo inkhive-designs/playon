@@ -1,0 +1,55 @@
+#masthead{
+  .site-branding{
+    @media screen and (min-width: 767px) and (max-width: 1200px){
+      float: none;
+      text-align: center;
+    }
+    padding: 0px 10px;
+    float: left;
+    h1.site-title a{
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 36px;
+      color: @onaccent;
+      letter-spacing: 1.5px;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+    p.site-description{
+      color: @onaccent;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-size: 14px;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+    #site-logo {
+      display: inline-block;
+      max-width: 150px;
+      max-height: 150px;
+      text-align: center;
+      padding: 20px 0px 30px 0px;
+      float: none;
+      @media screen and (max-width: 768px) {
+        float: none;
+      }
+    }
+  }
+  .site-description{
+    font-size: 16px;
+    margin-top: 0px;
+  }
+  .site-title-wrapper {
+    @media screen and (max-width: 991px) {
+      text-align: center;
+    }
+  }
+}
+
+.header-image #mobile-header-image{
+  img{
+    width: 100% !important;
+  }
+}

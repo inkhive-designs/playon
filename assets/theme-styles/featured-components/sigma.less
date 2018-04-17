@@ -1,0 +1,53 @@
+.imgcontainer:first-child {
+  display:none;
+}
+#featured-area-2 {
+    margin-bottom: 20px;
+  .section-title {
+    margin-bottom: 30px;
+  }
+
+  .imgcontainer {
+    padding: 1px;
+    .popimage {
+      position: relative;
+      margin-bottom: 16px;
+      img {
+        width: auto;
+        .transition(0.8s all ease);
+        @media screen and (max-width: 767px){
+          width: 100%;
+        }
+      }
+      .titledesc {
+        position: absolute;
+        width: 100%;
+        bottom: 0%;
+        padding: 25px 15px;
+        background: fade(@highlight-bg,65%);
+        pointer-events: none;
+        h2 { margin: 0; }
+        a {
+          color: white;
+          font-size: 18px;
+          font-weight: lighter;
+          display: block;
+          text-align: center;
+          pointer-events: none;
+        }
+
+      }
+      @media screen and (min-width: 767px) {
+        &:hover {
+          img {
+            -webkit-filter: brightness(0.7);
+            filter: brightness(0.7);
+          }
+          .titledesc {
+            background: @top-bar;
+          }
+        }
+      }
+    }
+  }
+}

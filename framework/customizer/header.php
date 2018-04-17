@@ -5,22 +5,22 @@
  * Date: 2/23/2018
  * Time: 11:28 AM
  */
-function inkshades_customize_register_header( $wp_customize ) {
+function playon_customize_register_header( $wp_customize ) {
 
-    $wp_customize->get_section( 'title_tagline')->title = __( 'Title, Tagline & Logo', 'inkshades' );
-    $wp_customize->get_section( 'title_tagline')->panel = 'inkshades_header_panel';
-    $wp_customize->remove_section('header_image');
+    $wp_customize->get_section( 'title_tagline')->title = __( 'Title, Tagline & Logo', 'playon' );
+    $wp_customize->get_section( 'title_tagline')->panel = 'playon_header_panel';
+   // $wp_customize->remove_section('header_image');
 
 
 //Logo Settings
-    $wp_customize->add_panel('inkshades_header_panel', array(
+    $wp_customize->add_panel('playon_header_panel', array(
         'priority' => 2,
         'capability' => 'edit_theme_options',
         'theme_supports' => '',
-        'title' => __('Header Settings', 'inkshades'),
+        'title' => __('Header Settings', 'playon'),
 
 
     ));
 
 }
-add_action( 'customize_register', 'inkshades_customize_register_header' );
+add_action( 'customize_register', 'playon_customize_register_header' );

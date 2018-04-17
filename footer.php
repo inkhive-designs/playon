@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package inkshades
+ * @package playon
  */
 
 ?>
@@ -23,12 +23,12 @@
 			<?php get_template_part('modules/social/social-fa-footer'); ?>
 		</div>
 		<div class="site-info">
-			<a target="_blank" href="<?php echo esc_url( __( 'https://inkhive.com/', 'inkshades' ) ); ?>"><?php
+			<a target="_blank" href="<?php echo esc_url( __( 'https://inkhive.com/', 'playon' ) ); ?>"><?php
 				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'inkshades' ), 'Inkhive Designs' );
+				printf( esc_html__( 'Proudly powered by %s', 'playon' ), 'Inkhive Designs' );
 			?></a>
 			<span class="sep"> | </span>
-			<?php echo ( esc_html(get_theme_mod('inkshades_footer_text')) == '' ) ? ('&copy; '.date('Y').' '.get_bloginfo('name').__('. All Rights Reserved. ','inkshades')) : esc_html( get_theme_mod('inkshades_footer_text') ); ?>
+			<?php echo ( esc_html(get_theme_mod('playon_footer_text')) == '' ) ? ('&copy; '.date('Y').' '.get_bloginfo('name').__('. All Rights Reserved. ','playon')) : esc_html( get_theme_mod('playon_footer_text') ); ?>
 
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

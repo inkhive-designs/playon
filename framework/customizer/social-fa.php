@@ -1,56 +1,56 @@
 <?php
 //social-icons
-function inkshades_customize_register_social( $wp_customize ){
-   $wp_customize -> add_section('inkshades_social_section', array(
-        'title' => __('Social Icons','inkshades'),
+function playon_customize_register_social( $wp_customize ){
+   $wp_customize -> add_section('playon_social_section', array(
+        'title' => __('Social Icons','playon'),
         'priority' => 2,
-        'panel' => 'inkshades_header_panel'
+        'panel' => 'playon_header_panel'
     ));
 
     $social_networks = array(
-        'none' => __('-' ,'inkshades'),
-        'facebook' => __('Facebook' ,'inkshades'),
-        'twitter' => __('Twitter' ,'inkshades'),
-        'google-plus' => __('Google Plus' ,'inkshades'),
-        'instagram' => __('instagram' ,'inkshades'),
-        'rss' => __('RSS Feeds' ,'inkshades'),
-        'vine' => __('Vine' ,'inkshades'),
-        'vimeo-square' => __('Vimeo' ,'inkshades'),
-        'youtube' => __('Youtube' ,'inkshades'),
-        'flickr' => __('Flickr' ,'inkshades'),
-        'pinterest' => __('Pinterest' ,'inkshades'),
+        'none' => __('-' ,'playon'),
+        'facebook' => __('Facebook' ,'playon'),
+        'twitter' => __('Twitter' ,'playon'),
+        'google-plus' => __('Google Plus' ,'playon'),
+        'instagram' => __('instagram' ,'playon'),
+        'rss' => __('RSS Feeds' ,'playon'),
+        'vine' => __('Vine' ,'playon'),
+        'vimeo-square' => __('Vimeo' ,'playon'),
+        'youtube' => __('Youtube' ,'playon'),
+        'flickr' => __('Flickr' ,'playon'),
+        'pinterest' => __('Pinterest' ,'playon'),
     );
     $social_count = count($social_networks);
 
     for( $x=1; $x <= ($social_count - 4); $x++):
 
-        $wp_customize -> add_setting('inkshades_social_'.$x, array(
+        $wp_customize -> add_setting('playon_social_'.$x, array(
             'default' => 'none',
-            'sanitize_callback' => 'inkshades_sanitize_social',
+            'sanitize_callback' => 'playon_sanitize_social',
         ));
-        $wp_customize -> add_control('inkshades_social_'.$x, array(
-            'settings' => 'inkshades_social_'.$x,
-            'section' => 'inkshades_social_section',
-            'label'     => __('Icon ', 'inkshades').$x,
+        $wp_customize -> add_control('playon_social_'.$x, array(
+            'settings' => 'playon_social_'.$x,
+            'section' => 'playon_social_section',
+            'label'     => __('Icon ', 'playon').$x,
             'type'      => 'select',
             'choices'    => $social_networks,
         ));
 
-        $wp_customize -> add_setting('inkshades_social_url'.$x, array(
+        $wp_customize -> add_setting('playon_social_url'.$x, array(
             'sanitize_callback' => 'esc_url_raw'
         ));
 
-        $wp_customize -> add_control('inkshades_social_url'.$x, array(
-            'settings' => 'inkshades_social_url'.$x,
-            'section' => 'inkshades_social_section',
-            'description' => __('Icon ' , 'inkshades').$x.__(' Url', 'inkshades'),
+        $wp_customize -> add_control('playon_social_url'.$x, array(
+            'settings' => 'playon_social_url'.$x,
+            'section' => 'playon_social_section',
+            'description' => __('Icon ' , 'playon').$x.__(' Url', 'playon'),
             'type'  =>  'url',
             'choices' => $social_networks,
         ));
     endfor;
 
     //sanitization function
-    function inkshades_sanitize_social($input){
+    function playon_sanitize_social($input){
         $social_networks = array(
             'none' ,
             'facebook',
@@ -71,4 +71,4 @@ function inkshades_customize_register_social( $wp_customize ){
         endif;
     }
 }
-add_action('customize_register','inkshades_customize_register_social');
+add_action('customize_register','playon_customize_register_social');

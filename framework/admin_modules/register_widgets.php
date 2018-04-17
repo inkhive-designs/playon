@@ -10,18 +10,18 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function inkshades_widgets_init() {
+function playon_widgets_init() {
     register_sidebar( array(
-        'name'          => esc_html__( 'Sidebar', 'inkshades' ),
+        'name'          => esc_html__( 'Sidebar', 'playon' ),
         'id'            => 'sidebar-1',
-        'description'   => esc_html__( 'Add widgets here.', 'inkshades' ),
+        'description'   => esc_html__( 'Add widgets here.', 'playon' ),
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget'  => '</aside>',
         'before_title'  => '<div class="line-effect"><h3 class="widget-title">',
         'after_title'   => '</h3></div>',
     ) );
     register_sidebar( array(
-        'name'          => __( 'Footer 1', 'inkshades' ),
+        'name'          => __( 'Footer 1', 'playon' ),
         'id'            => 'footer-1',
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget'  => '</aside>',
@@ -30,7 +30,7 @@ function inkshades_widgets_init() {
     ) );
 
     register_sidebar( array(
-        'name'          => __( 'Footer 2', 'inkshades' ),
+        'name'          => __( 'Footer 2', 'playon' ),
         'id'            => 'footer-2',
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget'  => '</aside>',
@@ -39,7 +39,7 @@ function inkshades_widgets_init() {
     ) );
 
     register_sidebar( array(
-        'name'          => __( 'Footer 3', 'inkshades' ),
+        'name'          => __( 'Footer 3', 'playon' ),
         'id'            => 'footer-3',
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget'  => '</aside>',
@@ -47,7 +47,7 @@ function inkshades_widgets_init() {
         'after_title'   => '</h3>',
     ) );
     register_sidebar( array(
-        'name'          => __( 'Footer 4', 'inkshades' ),
+        'name'          => __( 'Footer 4', 'playon' ),
         'id'            => 'footer-4',
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget'  => '</aside>',
@@ -55,4 +55,4 @@ function inkshades_widgets_init() {
         'after_title'   => '</h3>',
     ) );
 }
-add_action( 'widgets_init', 'inkshades_widgets_init' );
+add_action( 'widgets_init', 'playon_widgets_init' );

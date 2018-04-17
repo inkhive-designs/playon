@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package inkshades
+ * @package playon
  */
 
 ?>
@@ -14,11 +14,54 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'inkshades' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'playon' ); ?></a>
+    <?php
+    if(!class_exists('rt_slider'))
+    {
+        get_template_part('modules/header/header', 'image');
+    }
+    elseif(is_home()) {
+        if (get_theme_mod('rtslider_enable', 'true')) {
+            if (class_exists('rt_slider')) {
+                rt_slider::render('framework/featured-components/slider', 'swiper');
+            }
+        } else {
+            get_template_part('modules/header/header', 'image');
+        }
+    }
+    elseif (is_single() || is_category() || is_search() || is_archive()){
+        if (get_theme_mod('rtslider_enable_posts', 'true')) {
+            if (class_exists('rt_slider')) {
+                rt_slider::render('framework/featured-components/slider', 'swiper');
+            }
+        } else {
+            get_template_part('modules/header/header', 'image');
+        }
+    }
+    elseif (is_front_page()){
+        if (get_theme_mod('rtslider_enable_front', 'true')) {
+            if (class_exists('rt_slider')) {
+                rt_slider::render('framework/featured-components/slider', 'swiper');
+            }
+        } else {
+            get_template_part('modules/header/header', 'image');
+        }
+    }
 
-	<?php get_template_part('modules/header/top','bar'); ?>
+    else {
+        if (is_singular()) {
+            if (get_theme_mod('rtslider_enable_pages', 'true')) {
+                if (class_exists('rt_slider')) {
+                    rt_slider::render('framework/featured-components/slider', 'swiper');
+                }
+            } else {
+                get_template_part('modules/header/header', 'image');
+            }
+        }
+    }
 
-	<?php get_template_part('modules/header/masthead'); ?>
+
+    ?>
 
 	<?php get_template_part('framework/featured-components/sigma' ); ?>
 

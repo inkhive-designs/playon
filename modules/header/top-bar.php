@@ -1,12 +1,33 @@
-<div class="top-bar">
-    <div class="container adjust-top">
-        <div class="col-md-8 col-sm-12 top-menu-wrapper">
+<div class="top-bar" xmlns="http://www.w3.org/1999/html">
+    <div class="adjust-top">
+
+            <header id="masthead" class="site-header">
+            <div class="site-branding">
+                <div class="site-title-wrapper">
+                    <?php
+                    if ( has_custom_logo() ) : ?>
+                        <div class="playon-logo">
+                            <div id="site-logo">
+                                <?php the_custom_logo(); ?>
+                            </div>
+                        </div>
+                    <?php else:?>
+                        <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+                        <?php
+
+                        $description = get_bloginfo( 'description', 'display' );
+                        if ( $description || is_customize_preview() ) : ?>
+                            <p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+                        <?php
+                        endif;
+                    endif;?>
+                </div>
+            </div><!-- .site-branding -->
+
+
             <?php get_template_part('modules/navigation/primary','menu'); ?>
             <?php get_template_part('modules/navigation/mobile','menu'); ?>
 
-        </div>
-        <div class="col-md-4 col-sm-12">
-            <?php get_template_part('modules/header/top','buttons'); ?>
-       </div>
+        </header>
     </div>
 </div>

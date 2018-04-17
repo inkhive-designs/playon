@@ -7,14 +7,14 @@
  */
 
 /**
- * inkshades functions and definitions
+ * playon functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package inkshades
+ * @package playon
  */
 
-if ( ! function_exists( 'inkshades_setup' ) ) :
+if ( ! function_exists( 'playon_setup' ) ) :
     /**
      * Sets up theme defaults and registers support for various WordPress features.
      *
@@ -22,14 +22,14 @@ if ( ! function_exists( 'inkshades_setup' ) ) :
      * runs before the init hook. The init hook is too late for some features, such
      * as indicating support for post thumbnails.
      */
-    function inkshades_setup() {
+    function playon_setup() {
         /*
          * Make theme available for translation.
          * Translations can be filed in the /languages/ directory.
-         * If you're building a theme based on inkshades, use a find and replace
-         * to change 'inkshades' to the name of your theme in all the template files.
+         * If you're building a theme based on playon, use a find and replace
+         * to change 'playon' to the name of your theme in all the template files.
          */
-        load_theme_textdomain( 'inkshades', get_template_directory() . '/languages' );
+        load_theme_textdomain( 'playon', get_template_directory() . '/languages' );
 
         // Add default posts and comments RSS feed links to head.
         add_theme_support( 'automatic-feed-links' );
@@ -51,9 +51,9 @@ if ( ! function_exists( 'inkshades_setup' ) ) :
 
         // This theme uses wp_nav_menu() in one location.
         register_nav_menus( array(
-            'menu-1' => esc_html__( 'Primary', 'inkshades' ),
-            'menu-2' => esc_html__( 'Footer', 'inkshades' ),
-            'menu-3' => esc_html__( 'Mobile', 'inkshades' )
+            'menu-1' => esc_html__( 'Primary', 'playon' ),
+            'menu-2' => esc_html__( 'Footer', 'playon' ),
+            'menu-3' => esc_html__( 'Mobile', 'playon' )
         ) );
 
         /*
@@ -69,13 +69,19 @@ if ( ! function_exists( 'inkshades_setup' ) ) :
         ) );
 
         // Set up the WordPress core custom background feature.
-        add_theme_support( 'custom-background', apply_filters( 'inkshades_custom_background_args', array(
-            'default-color' => '#F1E3D1',
+        add_theme_support( 'custom-background', apply_filters( 'playon_custom_background_args', array(
+            'default-color' => '#F7F7F7',
             'default-image' => '',
         ) ) );
 
         //add thumbnail size
-        add_image_size('inkshades-thumb', 542,340, true );
+        add_image_size('playon-thumb', 542,340, true );
+
+        //Slider Support
+        add_theme_support('rt-slider', array( 10 ) );
+
+        //video support
+        add_theme_support( 'post-formats', array( 'aside', 'gallery' ) );
 
         // Add theme support for selective refresh for widgets.
         add_theme_support( 'customize-selective-refresh-widgets' );
@@ -93,4 +99,4 @@ if ( ! function_exists( 'inkshades_setup' ) ) :
         ) );
     }
 endif;
-add_action( 'after_setup_theme', 'inkshades_setup' );
+add_action( 'after_setup_theme', 'playon_setup' );

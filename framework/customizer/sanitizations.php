@@ -8,7 +8,7 @@
 
 
 /* Sanitization Functions Common to Multiple Settings go Here, Specific Sanitization Functions are defined along with add_setting() */
-function inkshades_sanitize_checkbox( $input ) {
+function playon_sanitize_checkbox( $input ) {
     if ( $input == 1 ) {
         return 1;
     } else {
@@ -16,14 +16,14 @@ function inkshades_sanitize_checkbox( $input ) {
     }
 }
 
-function inkshades_sanitize_positive_number( $input ) {
+function playon_sanitize_positive_number( $input ) {
     if ( ($input >= 0) && is_numeric($input) )
         return $input;
     else
         return '';
 }
 
-function inkshades_sanitize_category( $input ) {
+function playon_sanitize_category( $input ) {
     if ( term_exists(get_cat_name( $input ), 'category') )
         return $input;
     else

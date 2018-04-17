@@ -1,0 +1,31 @@
+#colophon{
+  .footer-social-icons {
+    text-align: center;
+    @media screen and (max-width: 991px) {
+      text-align: center;
+    }
+    margin-top: 10px;
+    margin-bottom: 20px;
+    position: relative;
+    a {
+      padding: 12px;
+      font-size: 14px;
+      @media screen and (min-width: 200px) and (max-width: 1200px) {
+        font-size: 14px;
+        padding: 8px;
+      }
+      background: fade(black, 5%);
+      border: 2px darken(@background, 5%) solid;
+      border-radius: 24px;
+      i {
+        color: @onaccent;
+      }
+      &:hover {
+        background: darken(@background,10%);
+        i {
+          color: @onaccent;
+        }
+      }
+    }
+  }
+}

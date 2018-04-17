@@ -9,12 +9,12 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package inkshades
+ * @package playon
  */
 
 get_header(); ?>
 
-	<div id="primary" class="content-area <?php do_action('inkshades_primary-width') ?>">
+	<div id="primary" class="content-area <?php do_action('playon_primary-width') ?>">
 		<main id="main" class="site-main">
 
 			<?php

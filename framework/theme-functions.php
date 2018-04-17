@@ -14,30 +14,30 @@ require get_template_directory() . '/framework/admin_modules/register_widgets.ph
 require get_template_directory() . '/framework/admin_modules/theme_setup.php';
 require get_template_directory() . '/framework/admin_modules/content_width.php';
 
-function inkshades_get_blog_layout(){
+function playon_get_blog_layout(){
     $ldir = 'framework/layouts/content';
-    if (get_theme_mod('inkshades_blog_layout') ) :
-        get_template_part( $ldir , get_theme_mod('inkshades_blog_layout') );
+    if (get_theme_mod('playon_blog_layout') ) :
+        get_template_part( $ldir , get_theme_mod('playon_blog_layout') );
     else :
-        get_template_part( $ldir ,'inkshades');
+        get_template_part( $ldir ,'playon');
     endif;
 }
-add_action('inkshades_blog_layout', 'inkshades_get_blog_layout');
+add_action('playon_blog_layout', 'playon_get_blog_layout');
 
 /*
 ** Function to check if Sidebar is enabled on Current Page 
 */
 
-function inkshades_load_sidebar() {
+function playon_load_sidebar() {
     $load_sidebar = true;
-    if ( get_theme_mod('inkshades_disable_sidebar') ) :
+    if ( get_theme_mod('playon_disable_sidebar') ) :
         $load_sidebar = false;
-    elseif( get_theme_mod('inkshades_disable_sidebar_home') && is_home() )	:
+    elseif( get_theme_mod('playon_disable_sidebar_home') && is_home() )	:
         $load_sidebar = false;
     // Exceptional Case for Archive Pages. In Pro Version, there should be a different setting.	
-    elseif( get_theme_mod('inkshades_disable_sidebar_home') && is_archive() )	:
+    elseif( get_theme_mod('playon_disable_sidebar_home') && is_archive() )	:
         $load_sidebar = false;
-    elseif( get_theme_mod('inkshades_disable_sidebar_front') && is_front_page() ) :
+    elseif( get_theme_mod('playon_disable_sidebar_front') && is_front_page() ) :
         $load_sidebar = false;
     endif;
 
@@ -47,30 +47,30 @@ function inkshades_load_sidebar() {
 /*
 **	Determining Sidebar and Primary Width
 */
-function inkshades_primary_class() {
-    $sw = esc_html(get_theme_mod('inkshades_sidebar_width',4));
+function playon_primary_class() {
+    $sw = esc_html(get_theme_mod('playon_sidebar_width',4));
     $class = "col-md-".(12-$sw);
 
-    if ( !inkshades_load_sidebar() )
+    if ( !playon_load_sidebar() )
         $class = "col-md-12";
     echo $class;
 
 }
-add_action('inkshades_primary-width', 'inkshades_primary_class');
+add_action('playon_primary-width', 'playon_primary_class');
 
-function inkshades_secondary_class() {
-    $sw = esc_html(get_theme_mod('inkshades_sidebar_width',4));
+function playon_secondary_class() {
+    $sw = esc_html(get_theme_mod('playon_sidebar_width',4));
     $class = "col-md-".$sw;
 
     echo $class;
 }
-add_action('inkshades_secondary-width', 'inkshades_secondary_class');
+add_action('playon_secondary-width', 'playon_secondary_class');
 
 
 /*
  * Pagination Function. Implements core paginate_links function.
  */
-function inkshades_pagination() {
+function playon_pagination() {
     global $wp_query;
     $big = 12345678;
     $page_format = paginate_links( array(
@@ -95,7 +95,7 @@ function inkshades_pagination() {
 ** Customizer Controls
 */
 if (class_exists('WP_Customize_Control')) {
-    class Inkshades_WP_Customize_Category_Control extends WP_Customize_Control {
+    class Playon_WP_Customize_Category_Control extends WP_Customize_Control {
         /**
          * Render the control's content.
          */
@@ -104,7 +104,7 @@ if (class_exists('WP_Customize_Control')) {
                 array(
                     'name'              => '_customize-dropdown-categories-' . $this->id,
                     'echo'              => 0,
-                    'show_option_none'  => __( '&mdash; Select &mdash;', 'inkshades' ),
+                    'show_option_none'  => __( '&mdash; Select &mdash;', 'playon' ),
                     'option_none_value' => '0',
                     'selected'          => $this->value(),
                 )

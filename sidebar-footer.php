@@ -1,7 +1,7 @@
 <?php
 /*
  * The Footer Widget Area
- * @package inkshades
+ * @package playon
  */
 ?>
     </div><!--.mega-container-->

@@ -27,7 +27,10 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/framework/customizer/init.php';
-
+/**
+ * Load TGM.
+ */
+require get_template_directory() . '/framework/tgmpa.php';
 /**
  * Load Jetpack compatibility file.
  */

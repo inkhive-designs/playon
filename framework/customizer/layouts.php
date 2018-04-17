@@ -5,122 +5,122 @@
  * Date: 2/23/2018
  * Time: 11:49 AM
  */
-function inkshades_customize_register_layouts( $wp_customize )
+function playon_customize_register_layouts( $wp_customize )
 {
     // Layout and Design
-    $wp_customize->add_panel( 'inkshades_design_panel', array(
+    $wp_customize->add_panel( 'playon_design_panel', array(
         'priority'       => 3,
         'capability'     => 'edit_theme_options',
         'theme_supports' => '',
-        'title'          => __('Design & Layout','inkshades'),
+        'title'          => __('Design & Layout','playon'),
     ) );
 
     $wp_customize->add_section(
-        'inkshades_design_options',
+        'playon_design_options',
         array(
-            'title'     => __('Blog Layout','inkshades'),
+            'title'     => __('Blog Layout','playon'),
             'priority'  => 1,
-            'panel'     => 'inkshades_design_panel'
+            'panel'     => 'playon_design_panel'
         )
     );
 
 
     $wp_customize->add_setting(
-        'inkshades_blog_layout',
-        array( 'sanitize_callback' => 'inkshades_sanitize_blog_layout' )
+        'playon_blog_layout',
+        array( 'sanitize_callback' => 'playon_sanitize_blog_layout' )
     );
 
-    function inkshades_sanitize_blog_layout( $input ) {
-        if ( in_array($input, array('inkshades') ) )
+    function playon_sanitize_blog_layout( $input ) {
+        if ( in_array($input, array('playon') ) )
             return $input;
         else
             return '';
     }
 
     $wp_customize->add_control(
-        'inkshades_blog_layout',array(
-            'label' => __('Select Layout','inkshades'),
-            'settings' => 'inkshades_blog_layout',
-            'section'  => 'inkshades_design_options',
+        'playon_blog_layout',array(
+            'label' => __('Select Layout','playon'),
+            'settings' => 'playon_blog_layout',
+            'section'  => 'playon_design_options',
             'type' => 'select',
             'choices' => array(
-                'inkshades' => __('inkshades Layout','inkshades')
+                'playon' => __('playon Layout','playon')
             )
         )
     );
     //Sidebar Settings
     $wp_customize->add_section(
-        'inkshades_sidebar_options',
+        'playon_sidebar_options',
         array(
-            'title'     => __('Sidebar Layout','inkshades'),
+            'title'     => __('Sidebar Layout','playon'),
             'priority'  => 2,
-            'panel'     => 'inkshades_design_panel'
+            'panel'     => 'playon_design_panel'
         )
     );
 
     $wp_customize->add_setting(
-        'inkshades_disable_sidebar',
-        array( 'sanitize_callback' => 'inkshades_sanitize_checkbox' )
+        'playon_disable_sidebar',
+        array( 'sanitize_callback' => 'playon_sanitize_checkbox' )
     );
 
     $wp_customize->add_control(
-        'inkshades_disable_sidebar', array(
-            'settings' => 'inkshades_disable_sidebar',
-            'label'    => __( 'Disable Sidebar Everywhere.','inkshades' ),
-            'section'  => 'inkshades_sidebar_options',
+        'playon_disable_sidebar', array(
+            'settings' => 'playon_disable_sidebar',
+            'label'    => __( 'Disable Sidebar Everywhere.','playon' ),
+            'section'  => 'playon_sidebar_options',
             'type'     => 'checkbox',
             'default'  => false
         )
     );
 
     $wp_customize->add_setting(
-        'inkshades_disable_sidebar_home',
-        array( 'sanitize_callback' => 'inkshades_sanitize_checkbox' )
+        'playon_disable_sidebar_home',
+        array( 'sanitize_callback' => 'playon_sanitize_checkbox' )
     );
 
     $wp_customize->add_control(
-        'inkshades_disable_sidebar_home', array(
-            'settings' => 'inkshades_disable_sidebar_home',
-            'label'    => __( 'Disable Sidebar on Blog & Archives.','inkshades' ),
-            'section'  => 'inkshades_sidebar_options',
+        'playon_disable_sidebar_home', array(
+            'settings' => 'playon_disable_sidebar_home',
+            'label'    => __( 'Disable Sidebar on Blog & Archives.','playon' ),
+            'section'  => 'playon_sidebar_options',
             'type'     => 'checkbox',
-            'active_callback' => 'inkshades_show_sidebar_options',
+            'active_callback' => 'playon_show_sidebar_options',
             'default'  => false
         )
     );
 
     $wp_customize->add_setting(
-        'inkshades_disable_sidebar_front',
-        array( 'sanitize_callback' => 'inkshades_sanitize_checkbox' )
+        'playon_disable_sidebar_front',
+        array( 'sanitize_callback' => 'playon_sanitize_checkbox' )
     );
 
     $wp_customize->add_control(
-        'inkshades_disable_sidebar_front', array(
-            'settings' => 'inkshades_disable_sidebar_front',
-            'label'    => __( 'Disable Sidebar on Front Page.','inkshades' ),
-            'section'  => 'inkshades_sidebar_options',
+        'playon_disable_sidebar_front', array(
+            'settings' => 'playon_disable_sidebar_front',
+            'label'    => __( 'Disable Sidebar on Front Page.','playon' ),
+            'section'  => 'playon_sidebar_options',
             'type'     => 'checkbox',
-            'active_callback' => 'inkshades_show_sidebar_options',
+            'active_callback' => 'playon_show_sidebar_options',
             'default'  => false
         )
     );
 
 
     $wp_customize->add_setting(
-        'inkshades_sidebar_width',
+        'playon_sidebar_width',
         array(
             'default' => 4,
-            'sanitize_callback' => 'inkshades_sanitize_positive_number' )
+            'sanitize_callback' => 'playon_sanitize_positive_number' )
     );
 
     $wp_customize->add_control(
-        'inkshades_sidebar_width', array(
-            'settings' => 'inkshades_sidebar_width',
-            'label'    => __( 'Sidebar Width','inkshades' ),
-            'description' => __('Min: 25%, Default: 33%, Max: 40%','inkshades'),
-            'section'  => 'inkshades_sidebar_options',
+        'playon_sidebar_width', array(
+            'settings' => 'playon_sidebar_width',
+            'label'    => __( 'Sidebar Width','playon' ),
+            'description' => __('Min: 25%, Default: 33%, Max: 40%','playon'),
+            'section'  => 'playon_sidebar_options',
             'type'     => 'range',
-            'active_callback' => 'inkshades_show_sidebar_options',
+            'active_callback' => 'playon_show_sidebar_options',
             'input_attrs' => array(
                 'min'   => 3,
                 'max'   => 5,
@@ -132,25 +132,25 @@ function inkshades_customize_register_layouts( $wp_customize )
     );
 
     /* Active Callback Function */
-    function inkshades_show_sidebar_options($control) {
+    function playon_show_sidebar_options($control) {
 
-        $option = $control->manager->get_setting('inkshades_disable_sidebar');
+        $option = $control->manager->get_setting('playon_disable_sidebar');
         return $option->value() == false ;
 
     }
     //custom footer text
     $wp_customize-> add_section(
-        'inkshades_custom_footer',
+        'playon_custom_footer',
         array(
-            'title'			=> __('Custom Footer Text','inkshades'),
-            'description'	=> __('Enter your Own Copyright Text.','inkshades'),
+            'title'			=> __('Custom Footer Text','playon'),
+            'description'	=> __('Enter your Own Copyright Text.','playon'),
             'priority'		=> 30,
-            'panel'			=> 'inkshades_design_panel'
+            'panel'			=> 'playon_design_panel'
         )
     );
 
     $wp_customize->add_setting(
-        'inkshades_footer_text',
+        'playon_footer_text',
         array(
             'default'		=> '',
             'sanitize_callback'	=> 'sanitize_text_field'
@@ -158,13 +158,13 @@ function inkshades_customize_register_layouts( $wp_customize )
     );
 
     $wp_customize->add_control(
-        'inkshades_footer_text',
+        'playon_footer_text',
         array(
-            'section' => 'inkshades_custom_footer',
-            'settings' => 'inkshades_footer_text',
+            'section' => 'playon_custom_footer',
+            'settings' => 'playon_footer_text',
             'type' => 'text'
         )
     );
     
 }
-add_action( 'customize_register', 'inkshades_customize_register_layouts' );
+add_action( 'customize_register', 'playon_customize_register_layouts' );

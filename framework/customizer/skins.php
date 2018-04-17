@@ -1,29 +1,29 @@
 <?php
-function inkshades_customize_register_skins($wp_customize){
-    $wp_customize->get_section('colors')->title = __('Theme Skins & Colors','inkshades');
-    $wp_customize->get_section('colors')->panel = 'inkshades_design_panel';
+function playon_customize_register_skins($wp_customize){
+    $wp_customize->get_section('colors')->title = __('Theme Skins & Colors','playon');
+    $wp_customize->get_section('colors')->panel = 'playon_design_panel';
     
-    //inkshades Skins
+    //playon Skins
 
-    $wp_customize -> add_setting('inkshades_skin',array(
+    $wp_customize -> add_setting('playon_skin',array(
         'default' => 'default',
-        'sanitize_callback' => 'inkshades_sanitize_skin',
+        'sanitize_callback' => 'playon_sanitize_skin',
     ));
 
     $skins = array(
-        'default' => __('Default(inkshades)','inkshades'),
-        'yellow' => __('Yellow','inkshades'),
+        'default' => __('Default(playon)','playon'),
+        'yellow' => __('Yellow','playon'),
     );
 
-    $wp_customize -> add_control('inkshades_skin',array(
-        'settings' => 'inkshades_skin',
+    $wp_customize -> add_control('playon_skin',array(
+        'settings' => 'playon_skin',
         'section' => 'colors',
-        'label' => __('Choose Skins','inkshades'),
+        'label' => __('Choose Skins','playon'),
         'type' => 'select',
         'choices' => $skins,
     ));
 
-    function inkshades_sanitize_skin($input){
+    function playon_sanitize_skin($input){
         if( in_array($input, array('default','yellow') )):
             return $input;
         else:
@@ -31,4 +31,4 @@ function inkshades_customize_register_skins($wp_customize){
         endif;
     }
 }
-add_action('customize_register','inkshades_customize_register_skins');
+add_action('customize_register','playon_customize_register_skins');

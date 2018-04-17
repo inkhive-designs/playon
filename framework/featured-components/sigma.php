@@ -1,14 +1,14 @@
 <div id="featured-area-2">
     <div class="container">
-        <?php if ( get_theme_mod('inkshades_fa2_enable') && is_front_page() ) : ?>
-            <div class="col-md-12">
+        <?php if ( get_theme_mod('playon_fa2_enable') && is_front_page() ) : ?>
+            <div class="col-md-12 col-sm-12">
                 <div class="section-title">
-                    <span><?php echo get_theme_mod('inkshades_fa2_title',__('Popular Articles','inkshades')); ?></span>
+                    <span><?php echo get_theme_mod('playon_fa2_title',__('Popular Articles','playon')); ?></span>
                 </div>
 
                 <?php /* Start the Loop */ $count=0; ?>
                 <?php
-                $args = array( 'posts_per_page' => 3, 'category' => get_theme_mod('inkshades_fa2_cat') );
+                $args = array( 'posts_per_page' => 3, 'category' => get_theme_mod('playon_fa2_cat') );
                 $lastposts = get_posts( $args );
 
                 foreach ( $lastposts as $post ) :
@@ -23,27 +23,23 @@
                     }
                     ?>
 
-
-                    <div class="<?php echo $class; ?> imgcontainer">
-
-                        <div class="popimage">
-                            <?php if (has_post_thumbnail()) : ?>
-                                <a href="<?php the_permalink() ?>" title="<?php the_title() ?>"><?php the_post_thumbnail( 'inkshades-thumb' ); ?></a>
-                            <?php else : ?>
-                                <a href="<?php the_permalink() ?>" title="<?php the_title() ?>"><img src="<?php echo get_template_directory_uri()."/assets/images/placeholder2.jpg"; ?>"></a>
-                            <?php endif; ?>
-                            <div class="titledesc">
-                                <h2><a href="<?php the_permalink() ?>"><?php echo the_title(); ?></a></h2>
+                        <div class="<?php echo $class; ?> imgcontainer">
+                            <div class="popimage">
+                                <?php if (has_post_thumbnail()) : ?>
+                                    <a href="<?php the_permalink() ?>" title="<?php the_title() ?>"><?php the_post_thumbnail( 'playon-thumb' ); ?></a>
+                                <?php else : ?>
+                                    <a href="<?php the_permalink() ?>" title="<?php the_title() ?>"><img src="<?php echo get_template_directory_uri()."/assets/images/placeholder2.jpg"; ?>"></a>
+                                <?php endif; ?>
+                                <div class="titledesc">
+                                    <h2><a href="<?php the_permalink() ?>"><?php echo the_title(); ?></a></h2>
+                                </div>
                             </div>
                         </div>
-
-                    </div>
 
                     <?php $count++;
                     if ($count == 4) break;
                 endforeach;
                 wp_reset_postdata(); ?>
-
             </div>
 
         <?php endif; ?>

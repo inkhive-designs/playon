@@ -12,7 +12,7 @@
  *
  * @global int $content_width
  */
-function inkshades_content_width() {
-    $GLOBALS['content_width'] = apply_filters( 'inkshades_content_width', 640 );
+function playon_content_width() {
+    $GLOBALS['content_width'] = apply_filters( 'playon_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'inkshades_content_width', 0 );
+add_action( 'after_setup_theme', 'playon_content_width', 0 );

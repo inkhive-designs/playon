@@ -1,0 +1,40 @@
+.body-font {
+  font-family: "Karla", sans-serif;
+}
+.title-font {
+  font-family: "Cinzel Decorative", serif;
+}
+.body{
+  overflow-x: auto;
+  .body-font;
+}
+.page-header {
+  margin-top: 0px;
+  border-bottom: none;
+  h1 {
+    font-size: 18px;
+    font-weight: lighter;
+    border-bottom: solid 1px #e1e1e1;
+    display: inline-block;
+    padding-bottom: 10px;
+  }
+}
+/* section titles */
+.section-title {
+  color: @content;
+  font-size: 50px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-indent: 20px;
+  text-align: center;
+  position: relative;
+  @media screen and (max-width: 991px) {
+    margin-top: 20px;
+  }
+  span {
+    position: relative;
+    padding: 15px;
+    z-index: 1;
+  }
+}

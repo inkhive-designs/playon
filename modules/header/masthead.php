@@ -4,7 +4,7 @@
         <div class="col-md-8 col-sm-12 site-title-wrapper">
             <?php
              if ( has_custom_logo() ) : ?>
-                <div class="inkshades-logo">
+                <div class="playon-logo">
                     <div id="site-logo">
                         <?php the_custom_logo(); ?>
                     </div>

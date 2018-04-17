@@ -1,0 +1,47 @@
+.playon{
+  display: block;
+  border-bottom: none;
+  margin-bottom: 15px;
+  margin-top: 0;
+  float: left;
+  position: relative;
+  .featured-thumb{
+    img{
+      border: 2px transparent solid;
+      border-radius: 10px;
+      @media screen and (max-width: 767px){
+        width: 767px;
+      }
+    }
+  }
+  .out-thumb{
+    h3{
+      a{
+        background: fade(@highlight-bg,80%);
+        padding: 8px;
+        top: 40px;
+        left: 2px;
+        @media screen and (max-width: 767px) {
+          left: 6px;
+        }
+          color: @content;
+        font-size: 16px;
+        position: absolute;
+        margin: 0px 15px;
+        font-weight:bold;
+        &:hover{
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  &:hover{
+    .out-thumb {
+      h3{
+        a{
+          color: @top-bar;
+        }
+      }
+    }
+  }
+}
