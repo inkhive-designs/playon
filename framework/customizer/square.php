@@ -4,7 +4,7 @@ function playon_customize_register_featured_angle( $wp_customize ) {
     $wp_customize->add_section(
         'playon_fc_fa2',
         array(
-            'title'     => __('Featured Area','playon'),
+            'title'     => __('Featured Area 1','playon'),
             'priority'  => 10,
         )
     );

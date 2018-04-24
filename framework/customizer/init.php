@@ -32,7 +32,10 @@ add_action( 'customize_register', 'playon_customize_register' );
 
 require_once get_template_directory().'/framework/customizer/sanitizations.php';
 require_once get_template_directory().'/framework/customizer/googlefonts.php';
-require_once get_template_directory().'/framework/customizer/featured-post-area.php';
+require_once get_template_directory().'/framework/customizer/square.php';
+require_once get_template_directory().'/framework/customizer/cube.php';
+require_once get_template_directory().'/framework/customizer/featured-category.php';
+require_once get_template_directory().'/framework/customizer/fpage.php';
 require_once get_template_directory().'/framework/customizer/header.php';
 require_once get_template_directory().'/framework/customizer/social-fa.php';
 require_once get_template_directory().'/framework/customizer/top-buttons.php';

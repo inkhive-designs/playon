@@ -24,7 +24,7 @@
     }
   }
   .current {
-    background: @highlight-bg;
+    background: @accent;
     color: @onaccent;
   }
 }
@@ -35,9 +35,11 @@
   text-decoration: none;
   margin-right: 5px;
   background-color: @background;
-  border: 1px solid #eee;
+  border: 1px solid darken(@background,10%);
+  text-transform: uppercase;
+  font-family: "Sriracha", sans-serif;
   display: inline-block;
-  color: @highlight-bg;
+  color: @accent;
   &:hover {
     background: none;
   }

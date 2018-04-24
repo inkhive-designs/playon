@@ -11,7 +11,7 @@
 			&:after{
 				display: block;
 				position: relative;
-				background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #fff 100%);
+				background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, @background 100%);
 				width: 100%;
 				content: '';
 			}
@@ -26,8 +26,7 @@
 			left: 0;
 		right: 0;
 		text-align: center;
-		font-family: inherit;
-		font-family: "Gugi", sans-serif;
+		font-family: "Sriracha", sans-serif;
 		background: none;
 		pointer-events: none;
 		@media screen and (max-width: 600px) {
@@ -42,13 +41,13 @@
 		.slide-title {
 			display: inline-block;
 			font-size: 28px;
-			color: @accent;
-			text-shadow: 2px 1px 0px #555;
+			color: darken(@onaccent,10%);
+			background: @layer;
 			@media screen and (max-width: 767px){
-				font-size: 18px;
+				font-size: 24px;
 			}
 			@media screen and (min-width:767px) and (max-width: 991px){
-				font-size: 16px;
+				font-size: 24px;
 			}
 			padding: 10px;
 			font-weight: normal;

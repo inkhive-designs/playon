@@ -17,7 +17,7 @@ function playon_widgets_init() {
         'description'   => esc_html__( 'Add widgets here.', 'playon' ),
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget'  => '</aside>',
-        'before_title'  => '<div class="line-effect"><h3 class="widget-title">',
+        'before_title'  => '<div><h3 class="widget-title">',
         'after_title'   => '</h3></div>',
     ) );
     register_sidebar( array(

@@ -1,3 +1,4 @@
+.single,.archieve,.catgory{
 #primary{
   padding: 20px;
   @media screen and (max-width: 767px){
@@ -56,6 +57,9 @@
       text-decoration: none;
       color: @accent;
       .title-font;
+      .entry-date,.published,.updated{
+        color:@onaccent !important;
+      }
     }
   }
   .entry-footer {
@@ -74,6 +78,9 @@
           text-decoration: none;
         }
       }
+    }
+    .cat-links{
+      display: none;
     }
   }
   .nav-links {
@@ -110,5 +117,80 @@
       }
       padding: 0;
     }
+  }
+}
+}
+//Single post only
+.single-post{
+  .header-image-wrapper{
+    .post-header {
+      background: @accent;
+      //background: darken(@background,10%);
+      color: @onaccent;
+      //color: @content;
+      padding: 0px;
+      @media screen and (min-width:767px){
+      .post-title .single-header {
+        position: relative;
+        text-align: center;
+        transform: translateY(100px);
+        h1 {
+          font-size: 32px;
+          text-transform: uppercase;
+          letter-spacing: 1.5px;
+        }
+      }
+    }
+      @media screen and (min-width:767px)and (max-width:991px) {
+        .post-title .single-header {
+          position: relative;
+          text-align: center;
+          transform: translateY(80px);
+          h1 {
+            font-size: 28px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+          }
+        }
+      }
+      @media screen and (max-width:767px){
+        .post-title .single-header {
+          position: relative;
+          text-align: center;
+          padding: 30px;
+          h1 {
+            font-size: 28px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+          }
+        }
+      }
+        .post-img{
+        padding: 0px;
+        #featured-image{
+          pointer-events: none;
+          img{
+            width: 100%;
+          }
+        }
+      }
+      .entry-meta{
+        .posted-on{
+          a {
+            .entry-date, .published,.updated{
+              color: @onaccent !important;
+            }
+          }
+        }
+      }
+    }
+    .header-image{
+      #mobile-header-image{
+        display: none;
+      }
+    }
+  }
+  #primary .entry-content{
+    background: none;
   }
 }

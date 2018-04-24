@@ -12,7 +12,7 @@ function playon_scripts() {
     wp_enqueue_style( 'playon-style', get_stylesheet_uri() );
 
     //playon main styles
-    wp_enqueue_style('playon-title-font', '//fonts.googleapis.com/css?family='.str_replace(" ", "+", get_theme_mod('playon_title_font', 'Cinzel Decorative') ) );
+    wp_enqueue_style('playon-title-font', '//fonts.googleapis.com/css?family='.str_replace(" ", "+", get_theme_mod('playon_title_font', 'Sriracha') ) );
 
     wp_enqueue_style('playon-body-font', '//fonts.googleapis.com/css?family='.str_replace(" ", "+", get_theme_mod('playon_body_font', 'Karla') ) );
 

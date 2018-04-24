@@ -1,5 +1,10 @@
 #secondary{
   padding: 20px;
+  aside{
+    @media screen and (min-width: 991px) {
+      margin-left: 30px;
+    }
+  }
   @media screen and (max-width: 991px){
     width: 96%;
     margin: 0 auto;
@@ -12,60 +17,21 @@
   clear: none;
   float: left;
   position: relative;
-  .line-effect {
-    border-bottom: solid 3px @onaccent;
-    position: relative;
-    transform-origin: top left;
-    .transition(1s all ease);
-
-    &:before {
-      content: "";
-      position: absolute;
-      top: 43px;
-      bottom: 0;
-      right: 0;
-      width: 100%;
-      background: @highlight-bg;
-      .transition(1s all ease 0s);
-      .transform(scaleY(0.5));
-      transform-origin: top;
-      @media screen and (min-width: 767px) {
-        &:hover:after {
-          .transform(scaleY(1));
-         }
-      }
-    }
-    &:after {
-      //content: "";
-      position: absolute;
-      top: 52px;
-      bottom: -13px;
-      right: 0;
-      width: 100%;
-      background: @highlight-bg;
-      .transition(0.6s all ease 0s);
-      .transform(scaleY(0.5));
-      transform-origin: top;
-      @media screen and (min-width: 767px) {
-        &:hover:after {
-          .transform(scaleY(1));
-        }
-      }
-    }
 
   h3.widget-title{
-    font-weight: bold;
     font-size: 20px;
+    letter-spacing: 1.5px;
     margin-top: 0px;
     padding: 10px;
     padding-left: 5px;
     position: relative;
     margin-bottom: 4px;
-    color: @top-bar;
+    color: @accent;
+    text-transform: uppercase;
 
     }
 
-  }
+
   .widget{
     padding: 0;
     padding: 5px;
@@ -79,11 +45,10 @@
       }
     }
     ul{
-      padding: 20px 5px 0px 8px;
+      padding: 0px;
       margin: 0px;
-      background: darken(@background,3%);
-      padding-bottom: 20px;
-      box-shadow: 1px 2px 8px #888888;
+      //padding-bottom: 20px;
+      //box-shadow: 1px 2px 8px #888888;
 
       li{
         list-style: none;

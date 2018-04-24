@@ -15,6 +15,7 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'playon' ); ?></a>
+    <?php get_template_part('modules/header/top','bar'); ?>
     <?php
     if(!class_exists('rt_slider'))
     {
@@ -62,7 +63,12 @@
 
 
     ?>
+    <?php  get_template_part('framework/featured-components/featured','category' ); ?>
 
-	<?php get_template_part('framework/featured-components/sigma' ); ?>
+	<?php get_template_part('framework/featured-components/square' );
+	      get_template_part('framework/featured-components/cube' );
+	      get_template_part('framework/featured-components/fpage');?>
 
-	<div id="content" class="site-content container">
+
+
+    <div id="content" class="site-content container">

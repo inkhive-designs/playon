@@ -3,7 +3,7 @@
   h3#reply-title {
     font-weight: bold;
     font-size: 18px;
-    color: @accent;
+    color: @top-bar;
   }
   input[type=text] {
     max-width: 550px;
@@ -20,6 +20,7 @@
     input, textarea {
       padding: 4px 5px 5px 10px;
       border-radius: 0;
+      box-shadow: 1px 2px 8px #888888;
     }
     label {
       background: @accent;
@@ -65,7 +66,7 @@
 #comments {
   .reply{
     a{
-      color: @accent;
+      color: @top-bar;
     }
   }
   margin-top: 55px;
@@ -81,9 +82,9 @@
     padding: 10px;
     margin-top: 15px;
     list-style: none;
-    background: darken(@background,10%);
+    background: @footer-bg;
     .comment-content {
-      color: @content;
+      color: darken(@content,0%);
       font-weight: lighter;
       p{
         a{
@@ -102,8 +103,8 @@
     a { font-weight: normal; }
   }
   .vcard img {
-    border: solid 1px @onaccent;
-    border-radius: 3px;
+    border: solid 4px @background;
+    border-radius: 5px;
     margin: 0 10px 10px 0;
   }
   .form-allowed-tags {
@@ -111,9 +112,9 @@
   }
   .comment-author,.vcard{
     b.fn{
-      color: @accent;
+      color: @top-bar;
       a{
-        color: @accent;
+        color: @top-bar;
       }
     }
   }

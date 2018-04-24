@@ -1,29 +1,77 @@
 /* Footer Sidebar */
 #footer-sidebar {
+  position: relative;
+  &:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top:-8px;
+    background-repeat: repeat;
+    height: 10px;
+    background-size: 6px 20px;
+    background-image: -webkit-radial-gradient(10px -5px, circle, transparent 12px, darken(@background,10%) 13px);
+    background-image: -o-radial-gradient(10px -5px, circle, transparent 12px, darken(@background,10%) 13px);
+    background-image: radial-gradient(circle at 10px -5px, transparent 12px, darken(@background,10%) 13px);
+  }
+  &:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-repeat: repeat;
+    height: 10px;
+    background-size: 6px 20px;
+    background-image: -webkit-radial-gradient(10px -5px, circle, transparent 12px, @background 13px);
+    background-image: -o-radial-gradient(10px -5px, circle, transparent 12px, @background 13px);
+    background-image: radial-gradient(circle at 10px -5px, transparent 12px, @background 13px);
+  }
   clear: both;
+  background: darken(@background,10%);
   .footer-column {
     h3.widget-title {
-      font-weight: bold;
       font-size: 20px;
+      letter-spacing: 1.5px;
       margin-top: 0px;
       padding: 10px;
       padding-left: 5px;
       position: relative;
       margin-bottom: 4px;
-      color: darken(@content,20%);
-      border-bottom: 2px @highlight-bg solid;
+      color: @content;
+      text-transform: uppercase;
+      &:before{
+        display: block;
+        content: "";
+        width: 35px;
+        height: 3px;
+        background: @accent;
+        position: absolute;
+        bottom: 0;
+      }
+      &:after{
+        display: block;
+        content: "";
+        width: 44px;
+        height: 3px;
+        background: @content;
+        position: absolute;
+        left: 40px;
+        bottom: 0;
+      }
     }
     .widget {
-      color: lighten(@onaccent, 15%);
-      font-size: 13px;
       padding: 15px;
       margin-top: 25px;
+      .tagcloud, .textwidget{
+        padding: 10px 0px;
+      }
       a {
-        color: @top-bar;
+        color: @content;
         font-weight: normal;
         .transition(0.4s all ease);
         &:hover {
-          color: darken(@accent, 10%);
+          color: @accent;
           text-decoration: none;
         }
       }
@@ -47,11 +95,11 @@
     }
     .widget_tag_cloud {
       .tagcloud a {
-        background: @accent;
+        background: lighten(@accent,10%);
         font-size: 14px !important;
         text-transform: uppercase;
         font-weight: lighter;
-        color: @content;
+        color: @onaccent;
         padding: 7px 5px;
         margin-bottom: 5px;
         display: inline-block;
@@ -146,7 +194,7 @@
       ul li:before {
         content: "\f054";
         font-family: "FontAwesome";
-        color: @highlight-bg;
+        color: darken(@content,20%);
         font-size: 10px;
         margin-right: 5px;
 
@@ -156,13 +204,13 @@
 }
 
 #colophon {
-  background: @footer-bg;
+  background: d@background;
   padding: 15px 10px 15px 10px;
   color: darken(@highlight-bg,10%);
   font-size: 13px;
   text-align: center;
   a {
-    color: @top-bar;
-    text-decoration: wavy;
+    color: @content;
+    text-decoration: none;
   }
 }

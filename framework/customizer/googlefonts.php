@@ -12,25 +12,25 @@ function playon_customize_register_fonts( $wp_customize )
         array(
             'title'     => __('Google Web Fonts','playon'),
             'priority'  => 41,
-            'description' => __('Defaults: Khula, Bitter.','playon'),
+            'description' => __('Defaults: Six Caps, Karla.','playon'),
             'panel'     => 'playon_design_panel'
 
         )
     );
 
-    $font_array = array('Cinzel Decorative','Open Sans','Karla','Bitter','Raleway','Khula','Droid Sans','Droid Serif','Roboto','Roboto Condensed','Lato','Bree Serif','Oswald','Slabo','Lora','Source Sans Pro','Ubuntu','Lobster','Arimo','Bitter','Noto Sans');
+    $font_array = array('Sriracha','Open Sans','Karla','Bitter','Raleway','Khula','Droid Sans','Droid Serif','Roboto','Roboto Condensed','Lato','Bree Serif','Oswald','Slabo','Lora','Source Sans Pro','Ubuntu','Lobster','Arimo','Bitter','Noto Sans');
     $fonts = array_combine($font_array, $font_array);
 
     $wp_customize->add_setting(
         'playon_title_font',
         array(
-            'default'=> 'Cinzel Decorative',
+            'default'=> 'Sriracha',
             'sanitize_callback' => 'playon_sanitize_gfont'
         )
     );
 
     function playon_sanitize_gfont( $input ) {
-        if ( in_array($input, array('Cinzel Decorative','Open Sans','Karla','Bitter','Raleway','Khula','Droid Sans','Droid Serif','Roboto','Roboto Condensed','Lato','Bree Serif','Oswald','Slabo','Lora','Source Sans Pro','PT Sans','Ubuntu','Lobster','Arimo','Bitter','Noto Sans') ) )
+        if ( in_array($input, array('Sriracha','Open Sans','Karla','Bitter','Raleway','Khula','Droid Sans','Droid Serif','Roboto','Roboto Condensed','Lato','Bree Serif','Oswald','Slabo','Lora','Source Sans Pro','PT Sans','Ubuntu','Lobster','Arimo','Bitter','Noto Sans') ) )
             return $input;
         else
             return '';

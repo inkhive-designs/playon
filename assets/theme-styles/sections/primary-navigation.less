@@ -1,8 +1,19 @@
 .top-bar{
-  background: @layer;
-  position: absolute;
-  left: 0;
-  right: 0;
+  background: @background;
+  position: relative;
+  &:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-repeat: repeat;
+    height: 10px;
+    background-size: 6px 20px;
+    background-image: -webkit-radial-gradient(10px -5px, circle, transparent 12px, @background 13px);
+    background-image: -o-radial-gradient(10px -5px, circle, transparent 12px, @background 13px);
+    background-image: radial-gradient(circle at 10px -5px, transparent 12px, @background 13px);
+  }
   .adjust-top {
     width: 98%;
     margin: 0 auto;
@@ -41,7 +52,7 @@
       margin-left: 0px;
       text-align: center;
       position: relative;
-      .transition(0.4s all ease);
+      transition: all ease 0.5s;
       ul {
         display: none;
         position: absolute;
@@ -49,6 +60,7 @@
         left: 100%;
         z-index: 10999;
         text-align: left;
+        transition: all ease 0.5s;
       }
       li {
         display: inline;
@@ -62,13 +74,14 @@
           padding: 16px 5px;
         }
         &:hover { /* DROPDOWN */
-          .transition(0.2s all ease);
+          transition: all ease 0.5s;
           a {
             text-decoration: none;
           }
           & > ul {
+            transition: all ease 0.5s;
             display: block;
-            background: fade(@layer, 40%);
+            background: fade(@accent,80);
             left: 0;
             @media screen and (min-width: 767px) and (max-width: 991px) {
               top: 76px;
@@ -87,6 +100,7 @@
                 ul {
                   top: 0;
                   left: 100%;
+                  transition: all ease 0.5s;
                 }
               }
             }
@@ -94,7 +108,7 @@
         }
         a {
           display: inline-block;
-          color: @onaccent;
+          color: @content;
           font-size: 14px;
           font-weight: normal;
           padding: 0px 10px;
@@ -104,47 +118,54 @@
         }
         ul a:hover {
           text-decoration: underline;
+          transition: all ease 0.5s;
         }
       }
       li.page_item_has_children {
         &:before {
+          transition: all ease 0.5s;
           font-family: "FontAwesome";
           display: inline;
           content: "\f107";
           font-weight: 900;
           position: absolute;
-          right: 0;
+          right: 4px;
           text-align: center;
-          top: 50%;
+          top: 51%;
           -webkit-transform: translateY(-50%);
           -ms-transform: translateY(-50%);
           transform: translateY(-50%);
-          color: @onaccent;
+          color: @content;
+          font-size: 11px;
         }
         &:hover {
           &:before {
+            transition: all ease 0.5s;
             font-family: "FontAwesome";
             display: inline;
             content: "\f106";
             font-weight: 900;
             position: absolute;
-            right: 0;
+            right: 4px;
             text-align: center;
-            top: 50%;
+            top: 51%;
             -webkit-transform: translateY(-50%);
             -ms-transform: translateY(-50%);
             transform: translateY(-50%);
-            color: @onaccent;
+            color: @content;
+            font-size: 11px;
           }
         }
       }
 
       ul.children {
+        border-top: 1px solid @content;
+        transition: all ease 0.5s;
         li {
           display: inline;
           margin-left: -3px;
           position: relative;
-          padding: 0px;
+          padding: 2px;
           text-transform: uppercase;
           letter-spacing: 0.3px;
           a {
@@ -172,6 +193,8 @@
           -ms-transform: translateY(-50%);
           transform: translateY(-50%);
           color: @onaccent;
+          font-size: 11px;
+          transition: all ease 0.5s;
         }
         &:hover {
           &:before {
@@ -187,6 +210,8 @@
             -ms-transform: translateY(-50%);
             transform: translateY(-50%);
             color: @onaccent;
+            font-size: 11px;
+            transition: all ease 0.5s;
           }
         }
       }
@@ -266,7 +291,7 @@ Nav Panel
   li { position: relative;}
 
   ul.sub-menu{
-    margin-left: 20px;
+    margin-left: 20px !important;
   }
 }
 
@@ -276,11 +301,14 @@ Nav Panel
   padding: 1em;
   text-decoration: none;
   text-align: left;
+  text-transform: uppercase;
+  font-family: "Karla", sans-serif;
+
 }
 
 .panel a:link,
 .panel a:visited {
-  color: #fff;
+  color: @onaccent;
 }
 
 .panel a:hover,

@@ -23,18 +23,18 @@
                     }
                     ?>
 
-                        <div class="<?php echo $class; ?> imgcontainer">
-                            <div class="popimage">
-                                <?php if (has_post_thumbnail()) : ?>
-                                    <a href="<?php the_permalink() ?>" title="<?php the_title() ?>"><?php the_post_thumbnail( 'playon-thumb' ); ?></a>
-                                <?php else : ?>
-                                    <a href="<?php the_permalink() ?>" title="<?php the_title() ?>"><img src="<?php echo get_template_directory_uri()."/assets/images/placeholder2.jpg"; ?>"></a>
-                                <?php endif; ?>
-                                <div class="titledesc">
-                                    <h2><a href="<?php the_permalink() ?>"><?php echo the_title(); ?></a></h2>
-                                </div>
+                    <div class="<?php echo $class; ?> imgcontainer">
+                        <div class="popimage">
+                            <?php if (has_post_thumbnail()) : ?>
+                                <a href="<?php the_permalink() ?>" title="<?php the_title() ?>"><?php the_post_thumbnail( 'playon-thumb' ); ?></a>
+                            <?php else : ?>
+                                <a href="<?php the_permalink() ?>" title="<?php the_title() ?>"><img src="<?php echo get_template_directory_uri()."/assets/images/placeholder2.jpg"; ?>"></a>
+                            <?php endif; ?>
+                            <div class="titledesc">
+                                <h2><a href="<?php the_permalink() ?>"><?php echo the_title(); ?></a></h2>
                             </div>
                         </div>
+                    </div>
 
                     <?php $count++;
                     if ($count == 4) break;

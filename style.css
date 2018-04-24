@@ -851,3 +851,6 @@ object {
 .gallery-caption {
 	display: block;
 }
+.vjs-poster, video {
+	background-size: 100% auto !important;
+}

@@ -47,6 +47,7 @@ if ( ! function_exists( 'playon_setup' ) ) :
          *
          * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
          */
+
         add_theme_support( 'post-thumbnails' );
 
         // This theme uses wp_nav_menu() in one location.
@@ -70,12 +71,16 @@ if ( ! function_exists( 'playon_setup' ) ) :
 
         // Set up the WordPress core custom background feature.
         add_theme_support( 'custom-background', apply_filters( 'playon_custom_background_args', array(
-            'default-color' => '#F7F7F7',
+            'default-color' => '#f7f7f7',
             'default-image' => '',
         ) ) );
 
         //add thumbnail size
         add_image_size('playon-thumb', 542,340, true );
+
+        if(function_exists('add_theme_support')) {
+            add_theme_support('category-thumbnails');
+        }
 
         //Slider Support
         add_theme_support('rt-slider', array( 10 ) );
