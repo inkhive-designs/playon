@@ -47,3 +47,28 @@ jQuery(function(){
         effect: 'fade'
     });
 });
+
+//
+// //lightbox
+// jQuery(".featured-dthumb").hoverIntent(function() {
+//         jQuery('.img-meta',this).fadeIn(100,'easeOutBounce');
+//         jQuery('.img-meta-link',this).css('margin-right','50px');
+//         jQuery('.img-meta-link',this).animate({'margin-right':'0px'},500);
+//     },
+//     function() {
+//         jQuery('.img-meta-link',this).animate({'margin-right':'50px'},500);
+//         jQuery('.img-meta-link').css('margin-right','50px');
+//         jQuery('.img-meta',this).fadeOut('fast');
+//         jQuery('.img-meta-link').stop(true,false);
+//     });
+//
+// jQuery('a.meta-link-img').nivoLightbox();
+
+
+//Lity lightbox
+
+// Open a URL in a lightbox
+var lightbox = lity();
+
+// Bind as an event handler
+$(document).on('click', '[data-lightbox]', lity);

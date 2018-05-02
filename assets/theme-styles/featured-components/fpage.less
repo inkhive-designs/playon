@@ -15,6 +15,7 @@
     padding-left: 20px;
     @media screen and (max-width: 767px){
       padding-bottom: 0px;
+      padding-top: 0px;
     }
 
     h1.title{
@@ -24,27 +25,29 @@
         font-size: 24px;
       }
         text-transform: uppercase;
-      &:before{
-        display: block;
-        content: "";
-        width: 35px;
-        height: 3px;
-        background: @accent;
-        position: absolute;
-        left: 18px;
-        bottom: 0;
-        top: 100px;
-      }
-      &:after{
-        display: block;
-        content: "";
-        width: 44px;
-        height: 3px;
-        background: @content;
-        position: absolute;
-        left: 53px;
-        bottom: 0;
-        top: 100px;
+      @media screen and (min-width: 767px) {
+          &:before{
+          display: block;
+          content: "";
+          width: 35px;
+          height: 3px;
+          background: @accent;
+          position: absolute;
+          left: 18px;
+          bottom: 0;
+          top: 100px;
+        }
+        &:after{
+          display: block;
+          content: "";
+          width: 44px;
+          height: 3px;
+          background: @content;
+          position: absolute;
+          left: 53px;
+          bottom: 0;
+          top: 100px;
+        }
       }
     }
     .more-button{
@@ -75,6 +78,9 @@
       display: inline-block;
       margin: 20px 0;
       color: @content;
+      @media screen and (max-width: 767px){
+        margin: 0px;
+      }
     }
   }
   .f-image{
@@ -86,6 +92,7 @@
       padding-top: 0px;
     }
     img {
+      width: 100%;
       transition: all ease 0.5s;
       filter: brightness(70%);
       filter: alpha(opacity=50); /* For IE8 and earlier */
@@ -103,6 +110,7 @@
   .f-image{
 
     img {
+      width: 100%;
       margin-top: 2px}
   }
   .h-content{
@@ -117,8 +125,13 @@
         background:@content;
       }
     }
+    p{
+      margin-top: 20px;
+    }
   }
 }
+.h-content p{margin-top: 20px;}
+
 .centered{text-align: center;}
 
 //static page 2 start
@@ -136,6 +149,13 @@
     padding-left: 20px;
     @media screen and (max-width: 767px){
       padding-bottom: 0px;
+      padding-top: 0px;
+    }
+    p{
+      margin-top: 20px;
+    }
+    @media screen and (max-width: 767px){
+      padding-bottom: 0px;
     }
 
     h1.title{
@@ -145,27 +165,31 @@
         font-size: 24px;
       }
       text-transform: uppercase;
-      &:before{
-        display: block;
-        content: "";
-        width: 35px;
-        height: 3px;
-        background: @accent;
-        position: absolute;
-        left: 18px;
-        bottom: 0;
-        top: 100px;
-      }
-      &:after{
-        display: block;
-        content: "";
-        width: 44px;
-        height: 3px;
-        background: @content;
-        position: absolute;
-        left: 53px;
-        bottom: 0;
-        top: 100px;
+      @media screen and (min-width: 767px) {
+
+        &:before {
+          display: block;
+          content: "";
+          width: 35px;
+          height: 3px;
+          background: @accent;
+          position: absolute;
+          left: 18px;
+          bottom: 0;
+          top: 100px;
+        }
+
+        &:after {
+          display: block;
+          content: "";
+          width: 44px;
+          height: 3px;
+          background: @content;
+          position: absolute;
+          left: 53px;
+          bottom: 0;
+          top: 100px;
+        }
       }
     }
     .more-button{
@@ -196,9 +220,13 @@
       display: inline-block;
       margin: 20px 0;
       color: @content;
+      @media screen and (max-width: 767px){
+        margin: 0px;
+      }
     }
   }
   .f-image{
+    float: right;
     padding-top: 30px;
     padding-bottom: 30px;
     padding-right: 20px;
@@ -207,6 +235,7 @@
       padding-top: 0px;
     }
     img {
+      width: 100%;
       transition: all ease 0.5s;
       filter: brightness(70%);
       filter: alpha(opacity=50); /* For IE8 and earlier */
@@ -224,6 +253,7 @@
   .f-image{
 
     img {
+      width: 100%;
       margin-top: 2px}
   }
   .h-content{

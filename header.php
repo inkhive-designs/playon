@@ -63,7 +63,7 @@
 
 
     ?>
-    <?php  get_template_part('framework/featured-components/featured','category' ); ?>
+    <?php  //get_template_part('framework/featured-components/featured','category' ); ?>
 
 	<?php get_template_part('framework/featured-components/square' );
 	      get_template_part('framework/featured-components/cube' );

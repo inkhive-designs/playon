@@ -17,6 +17,7 @@ function playon_customize_register( $wp_customize ) {
     $wp_customize->get_setting( 'header_textcolor' )->default = '#679C9B';
 
 
+
     if ( isset( $wp_customize->selective_refresh ) ) {
         $wp_customize->selective_refresh->add_partial( 'blogname', array(
             'selector'        => '.site-title a',

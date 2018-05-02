@@ -86,7 +86,7 @@ if ( ! function_exists( 'playon_setup' ) ) :
         add_theme_support('rt-slider', array( 10 ) );
 
         //video support
-        add_theme_support( 'post-formats', array( 'aside', 'gallery' ) );
+        add_theme_support( 'post-formats', array( 'aside', 'gallery','video' ) );
 
         // Add theme support for selective refresh for widgets.
         add_theme_support( 'customize-selective-refresh-widgets' );

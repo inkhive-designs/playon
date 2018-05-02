@@ -27,11 +27,25 @@ function playon_scripts() {
     wp_enqueue_style( 'swiper', get_template_directory_uri() . '/assets/css/swiper.min.css' );
 
 
+    //lity
+    wp_enqueue_style( 'lity-lightbox-css', get_template_directory_uri() . '/assets/css/lity.min.css' );
+
+
     //playon main styles
     wp_enqueue_style( 'playon-main-theme-style', get_template_directory_uri() . '/assets/theme-styles/css/'.get_theme_mod('playon_skin', 'default').'.css' );
 
     //custom js
     wp_enqueue_script( 'playon-custom-js', get_template_directory_uri() . '/js/custom.js', array('jquery-masonry'), false, true );
+
+
+
+    //lity js
+    wp_enqueue_script( 'lity-lightbox-js', get_template_directory_uri() . '/assets/js/lity.min.js');
+
+
+    wp_enqueue_script( 'hoverIntent');
+    wp_enqueue_script( 'jquery-effects-bounce');
+
 
     wp_enqueue_script( 'bigslide-js', get_template_directory_uri() . '/js/jquery.big-slide.js');
 

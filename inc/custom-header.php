@@ -25,8 +25,8 @@ function playon_custom_header_setup() {
 	) ) );
     register_default_headers( array(
             'default-image'    => array(
-                'url'            => '%s/assets/images/header-img.jpeg',
-                'thumbnail_url'    => '%s/assets/images/header-img.jpeg',
+                'url'            => '%s/assets/images/header.jpeg',
+                'thumbnail_url'    => '%s/assets/images/header.jpeg',
                 'description'    => __('Default Header Image', 'playon')
             )
         )

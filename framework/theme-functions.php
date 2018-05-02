@@ -121,3 +121,8 @@ if (class_exists('WP_Customize_Control')) {
     }
 }
 
+/**
+ * Include Meta Boxes.
+ */
+
+require get_template_directory() . '/framework/metaboxes/display-options.php';

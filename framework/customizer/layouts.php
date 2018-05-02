@@ -31,7 +31,7 @@ function playon_customize_register_layouts( $wp_customize )
     );
 
     function playon_sanitize_blog_layout( $input ) {
-        if ( in_array($input, array('playon','gallery','gallery-with-title') ) )
+        if ( in_array($input, array('playon','gallery','gallery-with-title','try') ) )
             return $input;
         else
             return '';
@@ -44,9 +44,10 @@ function playon_customize_register_layouts( $wp_customize )
             'section'  => 'playon_design_options',
             'type' => 'select',
             'choices' => array(
-                'playon' => __('playon Layout','playon'),
+                'playon' => __('Playon Layout','playon'),
                 'gallery' => __('Gallery Layout','playon'),
                 'gallery-with-title' => __('Gallery with Title Layout','playon'),
+                'try'     => __('Try Layout','playon'),
             )
         )
     );

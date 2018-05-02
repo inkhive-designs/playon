@@ -27,9 +27,19 @@
                             <?php else : ?>
                                 <a href="<?php the_permalink() ?>" title="<?php the_title() ?>"><img src="<?php echo get_template_directory_uri()."/assets/images/placeholder2.jpg"; ?>"></a>
                             <?php endif; ?>
-                            <div class="titledesc">
+
+                    <div class="titledesc">
                                 <h3><span class="title-font"><a href="<?php the_permalink() ?>"><?php echo the_title(); ?></a></span></h3>
-                            </div>
+                        <?php if(  get_post_meta( get_the_ID(),'enable-video', true ) ) :
+
+                            $video = get_post_meta( get_the_ID(),'enable-video', true );?>
+
+                            <div class="img-meta-video meta-icon"><a class='meta-link meta-link-video' title="<?php the_title(); ?>" href="<?php echo $video?>" data-lity><i class="fa fa-play fa-play-circle"></i></a></div>
+
+
+                        <?php endif;
+                        ?>
+                    </div>
                         </div>
                     </div>
                     <?php
@@ -68,6 +78,15 @@
                             <?php endif; ?>
                             <div class="titledesc">
                                 <h3><span class="title-font"><a href="<?php the_permalink() ?>"><?php echo the_title(); ?></a></span></h3>
+                                <?php if(  get_post_meta( get_the_ID(),'enable-video', true ) ) :
+
+                                    $video = get_post_meta( get_the_ID(),'enable-video', true );?>
+
+                                    <div class="img-meta-video meta-icon"><a class='meta-link meta-link-video' title="<?php the_title(); ?>" href="<?php echo $video?>" data-lity><i class="fa fa-play fa-play-circle"></i></a></div>
+
+
+                                <?php endif;
+                                ?>
                             </div>
                         </div>
                     </div>
@@ -106,6 +125,15 @@
                             <?php endif; ?>
                             <div class="titledesc">
                                 <h3><span class="title-font"><a href="<?php the_permalink() ?>"><?php echo the_title(); ?></a></span></h3>
+                                <?php if(  get_post_meta( get_the_ID(),'enable-video', true ) ) :
+
+                                    $video = get_post_meta( get_the_ID(),'enable-video', true );?>
+
+                                    <div class="img-meta-video meta-icon"><a class='meta-link meta-link-video' title="<?php the_title(); ?>" href="<?php echo $video?>" data-lity><i class="fa fa-play fa-play-circle"></i></a></div>
+
+
+                                <?php endif;
+                                ?>
                             </div>
                         </div>
                     </div>

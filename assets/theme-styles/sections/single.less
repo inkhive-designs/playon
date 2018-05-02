@@ -121,7 +121,7 @@
 }
 }
 //Single post only
-.single-post{
+.single-post,.page{
   .header-image-wrapper{
     .post-header {
       background: @accent;
@@ -192,5 +192,22 @@
   }
   #primary .entry-content{
     background: none;
+  }
+}
+.category,.archive{
+  .header-image-wrapper .post-header{
+    display: none;
+  }
+  .page-header {
+    width: 100%;
+  }
+  #primary {
+    .featured-thumb {
+      &:hover {
+       .img-meta-with-video, .img-meta {
+            display: none;
+          }
+      }
+    }
   }
 }

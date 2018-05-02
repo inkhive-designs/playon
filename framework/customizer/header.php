@@ -9,7 +9,9 @@ function playon_customize_register_header( $wp_customize ) {
 
     $wp_customize->get_section( 'title_tagline')->title = __( 'Title, Tagline & Logo', 'playon' );
     $wp_customize->get_section( 'title_tagline')->panel = 'playon_header_panel';
-   // $wp_customize->remove_section('header_image');
+    $wp_customize->remove_control('display_header_text');
+
+    // $wp_customize->remove_section('header_image');
 
 
 //Logo Settings

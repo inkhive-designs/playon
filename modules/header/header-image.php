@@ -1,9 +1,22 @@
-<?php  if(has_header_image()): ?>
-    <div class="header-image-wrapper">
-        <!--hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh -->
-
-        <?php if(is_single()):?>
-
+<div class="header-image-wrapper">
+    <?php  if(get_post_meta( get_the_ID(),'enable-video', true )):?>
+        <div class="post-header col-md-12 col-sm-12">
+            <div class="col-md-6 col-sm-6 post-title">
+                <header class="entry-header single-header">
+                    <?php the_title( '<h1 class="entry-title title-font">', '</h1>' ); ?>
+                    <div class="entry-meta">
+                        <?php playon_posted_on(); ?>
+                    </div><!-- .entry-meta -->
+                </header><!-- .entry-header -->
+            </div>
+            <div class="col-md-6 col-sm-6 post-img">
+                <div id="featured-image">
+                  <?php echo wp_oembed_get(get_post_meta( get_the_ID(),'enable-video', true ));?>
+                </div>
+            </div>
+        </div>
+   <?php else: ?>
+        <?php if(is_single() || is_page()):?>
         <div class="post-header col-md-12 col-sm-12">
             <div class="col-md-6 col-sm-6 post-title">
                 <header class="entry-header single-header">
@@ -20,11 +33,9 @@
                         <?php endif; ?>
                     </div>
             </div>
-
         </div>
-       <?php endif;?>
-
-        <!--hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh -->
+       <?php endif; endif;?>
+        <?php  if(has_header_image()): ?>
         <div class="linear-grad"></div>
         <div class="header-image">
             <div id="mobile-header-image">
