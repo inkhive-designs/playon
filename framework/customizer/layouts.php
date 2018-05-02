@@ -27,7 +27,9 @@ function playon_customize_register_layouts( $wp_customize )
 
     $wp_customize->add_setting(
         'playon_blog_layout',
-        array( 'sanitize_callback' => 'playon_sanitize_blog_layout' )
+        array( 'sanitize_callback' => 'playon_sanitize_blog_layout',
+        	   'default'		   => 'playon'
+        	 )
     );
 
     function playon_sanitize_blog_layout( $input ) {
@@ -44,7 +46,7 @@ function playon_customize_register_layouts( $wp_customize )
             'section'  => 'playon_design_options',
             'type' => 'select',
             'choices' => array(
-                'playon' => __('Playon Layout','playon'),
+                'playon' => __('PlayOn Layout','playon'),
                 'gallery' => __('Gallery Layout','playon'),
                 'gallery-with-title' => __('Gallery with Title Layout','playon'),
                 'try'     => __('Try Layout','playon'),

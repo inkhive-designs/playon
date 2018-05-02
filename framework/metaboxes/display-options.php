@@ -19,7 +19,7 @@ function playon_meta_callback( $post ) {
     <p>
     <div class="playon-row-content">
         <label for="enable-video">
-            <?php _e( 'Enter Video Link', 'playon' )?>
+            <?php _e( 'Enter the URL of the video to be added', 'playon' )?>
             <input type="text" name="enable-video" id="enable-video" value="<?php echo  get_post_meta( get_the_ID(),'enable-video', true )?>"/>
         </label>
     </div>

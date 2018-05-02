@@ -20,7 +20,7 @@ function playon_scripts() {
     //enqueue bootstrap and fontawesome css//
     wp_enqueue_style('playon-bootstrap',get_template_directory_uri().'/assets/bootstrap/css/bootstrap.min.css',true);
 
-    wp_enqueue_style('playon-fa',get_template_directory_uri().'/assets/font-awesome/css/font-awesome.css');
+    wp_enqueue_style('playon-fa',get_template_directory_uri().'/assets/font-awesome/css/fontawesome-all.min.css');
 
     //hover min.css
     wp_enqueue_style( 'playon-hover-style', get_template_directory_uri() . '/assets/css/hover.min.css' );
@@ -63,3 +63,9 @@ function playon_scripts() {
     }
 }
 add_action( 'wp_enqueue_scripts', 'playon_scripts' );
+
+// Update CSS within in Admin
+	function admin_style() {
+	  wp_enqueue_style('admin-styles', get_template_directory_uri().'/assets/css/admin.css');
+	}
+	add_action('admin_enqueue_scripts', 'admin_style');

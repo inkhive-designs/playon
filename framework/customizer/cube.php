@@ -11,7 +11,7 @@ function playon_customize_register_featured_cube( $wp_customize )
     $wp_customize->add_section(
         'playon_a_fe_boxes',
         array(
-            'title' => __('Featured Posts 2', 'playon'),
+            'title' => __('Featured Area 2', 'playon'),
             'priority' => 35,
         )
     );
