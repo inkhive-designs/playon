@@ -14,7 +14,7 @@ function playon_customize_register( $wp_customize ) {
     $wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
     $wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
     $wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
-    $wp_customize->get_setting( 'header_textcolor' )->default = '#679C9B';
+    $wp_customize->get_setting( 'header_textcolor' )->default = '#444444';
 
 
 
@@ -39,7 +39,6 @@ require_once get_template_directory().'/framework/customizer/featured-category.p
 require_once get_template_directory().'/framework/customizer/fpage.php';
 require_once get_template_directory().'/framework/customizer/header.php';
 require_once get_template_directory().'/framework/customizer/social-fa.php';
-require_once get_template_directory().'/framework/customizer/top-buttons.php';
 require_once get_template_directory().'/framework/customizer/layouts.php';
 require_once get_template_directory().'/framework/customizer/skins.php';
 

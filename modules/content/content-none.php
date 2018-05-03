@@ -32,8 +32,9 @@
                 ?></p>
 
         <?php elseif ( is_search() ) : ?>
+            <a><img alt="<?php the_title() ?>" src="<?php echo get_template_directory_uri()."/assets/images/404.jpeg"; ?>"></a>
 
-            <p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'playon' ); ?></p>
+            <h2><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'playon' ); ?></h2>
             <?php
             get_search_form();
 

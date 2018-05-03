@@ -9,16 +9,15 @@ function playon_customize_register_social( $wp_customize ){
 
     $social_networks = array(
         'none' => __('-' ,'playon'),
-        'facebook' => __('Facebook' ,'playon'),
+        'facebook-f' => __('Facebook' ,'playon'),
         'twitter' => __('Twitter' ,'playon'),
-        'google-plus' => __('Google Plus' ,'playon'),
+        'google-plus-g' => __('Google Plus' ,'playon'),
         'instagram' => __('instagram' ,'playon'),
-        'rss' => __('RSS Feeds' ,'playon'),
         'vine' => __('Vine' ,'playon'),
-        'vimeo-square' => __('Vimeo' ,'playon'),
+        'vimeo-v' => __('Vimeo' ,'playon'),
         'youtube' => __('Youtube' ,'playon'),
         'flickr' => __('Flickr' ,'playon'),
-        'pinterest' => __('Pinterest' ,'playon'),
+        'pinterest-p' => __('Pinterest' ,'playon'),
     );
     $social_count = count($social_networks);
 
@@ -53,16 +52,15 @@ function playon_customize_register_social( $wp_customize ){
     function playon_sanitize_social($input){
         $social_networks = array(
             'none' ,
-            'facebook',
+            'facebook-f',
             'twitter',
-            'google-plus',
+            'google-plus-g',
             'instagram',
-            'rss',
             'vine',
-            'vimeo-square',
+            'vimeo-v',
             'youtube',
             'flickr',
-            'pinterest');
+            'pinterest-p');
 
         if(in_array($input,$social_networks)):
             return $input;

@@ -83,40 +83,58 @@
       display: none;
     }
   }
-  .nav-links {
-    padding: 10px 0px;
-    padding-top: 20px;
-    overflow: auto;
-    img {
-      width: 90px;
-      border: solid 5px darken(@background,5%);
-      border-radius: 3px;
-    }
-    .navl {
-      display: block;
-      clear: both;
-      padding: 10px 0;
-      a {
-        font-weight: normal;
-        .transition(0.4s all ease);
-        color: lighten(@content,10%);
-        font-style: italic;
-        &:hover {
+  .post-navigation{
+    .nav-links {
+      padding: 10px 0px;
+      padding-top: 20px;
+      overflow: auto;
+      border-bottom: none;
+      @media screen and (max-width: 767px){
+        overflow: hidden;
+      }
+      .nav-previous{
+        padding: 0;
+        a{
+          color: @content;
+          font-size: 12px;
+          @media screen and (max-width: 767px){
+            font-size: 12px;
+            font-weight: normal;
+          }
+        }
+        &:before{
+          cursor: pointer;
+          padding: 0px 5px;
+          content: "\f060";
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          font-size: 16px;
+          margin-right: 5px;
           color: @accent;
-          text-decoration: none;
+        }
+      }
+      .nav-next{
+        a{
+          color: @content;
+          font-size: 12px;
+          @media screen and (max-width: 767px){
+            font-size: 12px;
+            font-weight: normal;
+          }
+        }
+        &:after{
+          cursor: pointer;
+          padding: 0px 5px;
+          content: "\f061";
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          font-size: 16px;
+          margin-left: 5px;
+          color: @accent;
         }
       }
     }
-    .nav-previous, .nav-next {
-      a{
-        color: @top-bar;
-        &:hover{
-          color: @highlight-bg;
-          text-decoration: none;
-        }
-      }
-      padding: 0;
-    }
+
   }
 }
 }
@@ -209,5 +227,12 @@
           }
       }
     }
+  }
+}
+
+
+.search{
+  .header-image-wrapper .post-header{
+    display: none;
   }
 }

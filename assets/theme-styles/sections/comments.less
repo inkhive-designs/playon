@@ -13,6 +13,12 @@
     border: solid 1px darken(@background,20%);
     color: @content;
     outline: none;
+    @media screen and (max-width: 767px) {
+      width: 200px !important;
+    }
+  }
+  p.comment-form-author label #author{
+    width: 200px !important;
   }
   .comment-form-author, .comment-form-email, .comment-form-url, .comment-form-comment {
     position: relative;
@@ -20,6 +26,9 @@
     input, textarea {
       padding: 4px 5px 5px 10px;
       border-radius: 0;
+      @media screen and (max-width: 767px) {
+        width: 200px !important;
+      }
     }
     label {
       background: @accent;
@@ -27,7 +36,7 @@
       border-bottom: solid 1px @accent;
       padding: 5px;
       margin-right: -5px;
-      min-width: 100%;
+      min-width: 200px;
       text-align: center;
     }
   }

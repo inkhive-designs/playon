@@ -12,7 +12,7 @@ function playon_customize_register_skins($wp_customize){
 
     $skins = array(
         'default' => __('Default(playon)','playon'),
-        'yellow' => __('Yellow','playon'),
+        'blue' => __('Blue','playon'),
     );
 
     $wp_customize -> add_control('playon_skin',array(
@@ -24,7 +24,7 @@ function playon_customize_register_skins($wp_customize){
     ));
 
     function playon_sanitize_skin($input){
-        if( in_array($input, array('default','yellow') )):
+        if( in_array($input, array('default','blue') )):
             return $input;
         else:
             return '';

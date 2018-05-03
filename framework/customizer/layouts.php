@@ -33,7 +33,7 @@ function playon_customize_register_layouts( $wp_customize )
     );
 
     function playon_sanitize_blog_layout( $input ) {
-        if ( in_array($input, array('playon','gallery','gallery-with-title','try') ) )
+        if ( in_array($input, array('playon','gallery','gallery-with-title') ) )
             return $input;
         else
             return '';
@@ -49,7 +49,6 @@ function playon_customize_register_layouts( $wp_customize )
                 'playon' => __('PlayOn Layout','playon'),
                 'gallery' => __('Gallery Layout','playon'),
                 'gallery-with-title' => __('Gallery with Title Layout','playon'),
-                'try'     => __('Try Layout','playon'),
             )
         )
     );
