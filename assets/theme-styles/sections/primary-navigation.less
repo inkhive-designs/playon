@@ -1,6 +1,7 @@
 .top-bar{
   background: @background;
   position: relative;
+/*
   &:before{
     content: "";
     position: absolute;
@@ -14,32 +15,15 @@
     background-image: -o-radial-gradient(10px -5px, circle, transparent 12px, @background 13px);
     background-image: radial-gradient(circle at 10px -5px, transparent 12px, @background 13px);
   }
-  .adjust-top {
-    @media screen and (min-width: 991px) {
-      width: 98%;
-      margin: 0 auto;
-    }
-
-  }
-    @media screen and (min-width: 767px) and (max-width: 991px) {
-    .adjust-top {
-      display: block;
-      width: 100%;     // flex-wrap: wrap-reverse;
-    }
-  }
-  @media screen and (min-width: 767px) and (max-width: 991px){
-    .top-menu-wrapper{
-      text-align: center !important;
-    }
-  }
+*/
 
   /* TOP MENU */
   #top-menu {
     float: right;
-    @media screen and (min-width: 767px) and (max-width: 1200px) {
+    @media screen and (min-width: 768px) and (max-width: 1200px) {
       float: none !important;
     }
-      @media screen and (min-width: 768px) and (max-width: 991px) {
+    @media screen and (min-width: 768px) and (max-width: 991px) {
       float: none;
       text-align: center;
       padding: 0px;
@@ -93,14 +77,13 @@
             display: block;
             background: fade(@accent,80);
             left: 0;
-            @media screen and (min-width: 767px) and (max-width: 991px) {
+            @media screen and (min-width: 768px) and (max-width: 991px) {
               top: 64px;
             }
-            padding: 10px 0px;
             li {
               display: block;
               a {
-                padding: 5px 20px;
+                padding: 10px 20px;
                 font-size: 14px;
                 font-weight: lighter;
                 text-decoration: none;
@@ -244,12 +227,12 @@
 
 //Bligslide Menu
 .menu-link{
-  @media screen and (min-width: 767px) {
+  @media screen and (min-width: 768px) {
     display: none;
   }
 }
 .mobilemenu{
-  @media screen and (min-width: 767px) {
+  @media screen and (min-width: 768px) {
     display: none;
   }
 }

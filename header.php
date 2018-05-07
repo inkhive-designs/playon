@@ -17,7 +17,9 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'playon' ); ?></a>
     <?php get_template_part('modules/header/top','bar'); ?>
     <?php get_template_part('modules/header/jumbosearch'); ?>
-    <span id="searchicon" class="fas fa-search"></span>
+    <span id="searchicon">
+    	<i class="fas fa-search"></i>
+    </span>
 
     <?php
 	
@@ -66,8 +68,8 @@
 
 	<?php
     get_template_part('framework/featured-components/square' );
-	      get_template_part('framework/featured-components/cube' );
-	      get_template_part('framework/featured-components/fpage');
+	get_template_part('framework/featured-components/cube' );
+	get_template_part('framework/featured-components/fpage');
     get_template_part('framework/featured-components/featured-category' );
     ?>
 

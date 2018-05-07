@@ -183,6 +183,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/assets\/images\/404.jpeg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 81833,
+		"inputAbbreviatedPath": "\/assets\/images\/404.jpeg",
+		"outputAbbreviatedPath": "\/assets\/images\/404.jpeg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/images\/header-img.jpeg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -201,6 +212,17 @@
 		"initialSize": 143535,
 		"inputAbbreviatedPath": "\/assets\/images\/header.jpeg",
 		"outputAbbreviatedPath": "\/assets\/images\/header.jpeg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/images\/pattern.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 20654,
+		"inputAbbreviatedPath": "\/assets\/images\/pattern.png",
+		"outputAbbreviatedPath": "\/assets\/images\/pattern.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -369,40 +391,20 @@
 		"strictMath": 0,
 		"strictUnits": 0
 		},
-	"\/assets\/theme-styles\/blog-layout\/try.less": {
-		"allowInsecureImports": 0,
-		"createSourceMap": 0,
-		"disableJavascript": 0,
-		"fileType": 1,
-		"ieCompatibility": 1,
+	"\/assets\/theme-styles\/css\/blue.css": {
+		"fileType": 16,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/assets\/theme-styles\/blog-layout\/try.less",
-		"outputAbbreviatedPath": "\/assets\/theme-styles\/css\/try.css",
+		"inputAbbreviatedPath": "\/assets\/theme-styles\/css\/blue.css",
+		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"relativeURLS": 0,
-		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0,
-		"strictImports": 0,
-		"strictMath": 0,
-		"strictUnits": 0
+		"outputPathIsSetByUser": 0
 		},
 	"\/assets\/theme-styles\/css\/default.css": {
 		"fileType": 16,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/theme-styles\/css\/default.css",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/assets\/theme-styles\/css\/yellow.css": {
-		"fileType": 16,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/assets\/theme-styles\/css\/yellow.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -446,6 +448,26 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/theme-styles\/featured-components\/cube.less",
 		"outputAbbreviatedPath": "\/assets\/theme-styles\/css\/cube.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"relativeURLS": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"strictImports": 0,
+		"strictMath": 0,
+		"strictUnits": 0
+		},
+	"\/assets\/theme-styles\/featured-components\/featured-category.less": {
+		"allowInsecureImports": 0,
+		"createSourceMap": 0,
+		"disableJavascript": 0,
+		"fileType": 1,
+		"ieCompatibility": 1,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/theme-styles\/featured-components\/featured-category.less",
+		"outputAbbreviatedPath": "\/assets\/theme-styles\/css\/featured-category.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -656,6 +678,26 @@
 		"strictMath": 0,
 		"strictUnits": 0
 		},
+	"\/assets\/theme-styles\/sections\/jumbosearch.less": {
+		"allowInsecureImports": 0,
+		"createSourceMap": 0,
+		"disableJavascript": 0,
+		"fileType": 1,
+		"ieCompatibility": 1,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/theme-styles\/sections\/jumbosearch.less",
+		"outputAbbreviatedPath": "\/assets\/theme-styles\/css\/jumbosearch.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"relativeURLS": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"strictImports": 0,
+		"strictMath": 0,
+		"strictUnits": 0
+		},
 	"\/assets\/theme-styles\/sections\/pagination.less": {
 		"allowInsecureImports": 0,
 		"createSourceMap": 0,
@@ -796,7 +838,7 @@
 		"strictMath": 0,
 		"strictUnits": 0
 		},
-	"\/assets\/theme-styles\/skins\/default.less": {
+	"\/assets\/theme-styles\/skins\/blue.less": {
 		"allowInsecureImports": 0,
 		"createSourceMap": 0,
 		"disableJavascript": 0,
@@ -804,8 +846,8 @@
 		"ieCompatibility": 1,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/assets\/theme-styles\/skins\/default.less",
-		"outputAbbreviatedPath": "\/assets\/theme-styles\/css\/default.css",
+		"inputAbbreviatedPath": "\/assets\/theme-styles\/skins\/blue.less",
+		"outputAbbreviatedPath": "\/assets\/theme-styles\/css\/blue.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -816,16 +858,7 @@
 		"strictMath": 0,
 		"strictUnits": 0
 		},
-	"\/assets\/theme-styles\/skins\/yellow.css": {
-		"fileType": 16,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/assets\/theme-styles\/skins\/yellow.css",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/assets\/theme-styles\/skins\/yellow.less": {
+	"\/assets\/theme-styles\/skins\/default.less": {
 		"allowInsecureImports": 0,
 		"createSourceMap": 0,
 		"disableJavascript": 0,
@@ -833,8 +866,8 @@
 		"ieCompatibility": 1,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/assets\/theme-styles\/skins\/yellow.less",
-		"outputAbbreviatedPath": "\/assets\/theme-styles\/css\/yellow.css",
+		"inputAbbreviatedPath": "\/assets\/theme-styles\/skins\/default.less",
+		"outputAbbreviatedPath": "\/assets\/theme-styles\/css\/default.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -1027,15 +1060,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/framework\/customizer\/top-buttons.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/framework\/customizer\/top-buttons.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/framework\/featured-components\/cube.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -1104,15 +1128,6 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/framework\/layouts\/content-playon.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/framework\/layouts\/content-try.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/framework\/layouts\/content-try.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -1354,6 +1369,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/modules\/header\/jumbosearch.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/modules\/header\/jumbosearch.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/modules\/header\/masthead.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -1368,15 +1392,6 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/modules\/header\/top-bar.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/modules\/header\/top-buttons.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/modules\/header\/top-buttons.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -1422,6 +1437,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/page.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/README.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/README.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
