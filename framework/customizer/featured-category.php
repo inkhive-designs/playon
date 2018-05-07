@@ -17,7 +17,7 @@ function playon_customize_register_fp_cat( $wp_customize ) {
     $wp_customize->add_control(
         'playon_featposts_cat_enable', array(
             'settings' => 'playon_featposts_cat_enable',
-            'label'    => __( 'Enable', 'playon' ),
+            'label'    => __( 'Enable the Post Categories on Front Page', 'playon' ),
             'section'  => 'playon_featposts_cat',
             'type'     => 'checkbox',
         )

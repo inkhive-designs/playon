@@ -11,7 +11,7 @@
 
 ## Description
 
-Playon is a unique, ultra creative multipurpose WordPress theme. Playon supports all basic features and is fully mobile friendly. And with Support for Custom Widgets, Featured Posts section, etc you can make this theme look even more beautiful on your website. 
+Playon is a an amazing Video WordPress theme. Perfect for making a video blog, PlayOn supports playback from all major video sites including as YouTube and Vimeo.
 Demo Here: http://demo.inkhive.com/playon/
 
 ## Copyright
@@ -31,14 +31,37 @@ This theme is 100% GPL. And any external resources used and bundled with the the
 3. _S/Underscores Framework
              - GPL v2
              - http://underscores.me
+            
+4. BigSlide
+			- MIT
+			- http://ascott1.github.io/bigSlide.js/
+			
+5. Swiper Slider
+			- MIT
+			- http://idangero.us/swiper/
+			
+		
 
-4. Modernizer
- 	        - MIT and BSD
-            - http://modernizr.com
 
+All Other Resources, apart from the ones mentioned above have been created by InkHive.com fall under GPL v3 license of the theme.
 
-All Other Resources, apart from the ones mentioned above have been created by me fall under GPL v3 license of the theme.
+## Screenshot & Image Credits
+
+All the Images used in the Screenshot are Public Domain.
+    1. Discotheque DJ
+    https://pixabay.com/en/club-club-scene-disco-discotheque-1869222/
+    
+    2. Dancing in the smoke
+    https://www.pexels.com/photo/action-celebration-club-crowd-341858/
+    
+    3. Guys enjoying the party
+    https://www.pexels.com/photo/two-man-wearing-eyeglasses-standing-under-red-led-light-948198/
+    
+    4. Girls in a Club
+    https://www.pexels.com/photo/photo-of-women-wearing-masks-787961/
 
 ## Changelog
 
 ### 1.0.0
+
+* Initial Release
