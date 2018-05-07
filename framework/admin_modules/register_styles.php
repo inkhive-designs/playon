@@ -24,6 +24,8 @@ function playon_scripts() {
 
     //hover min.css
     wp_enqueue_style( 'playon-hover-style', get_template_directory_uri() . '/assets/css/hover.min.css' );
+
+    //Slider Swiper
     wp_enqueue_style( 'swiper', get_template_directory_uri() . '/assets/css/swiper.min.css' );
 
 
@@ -63,9 +65,3 @@ function playon_scripts() {
     }
 }
 add_action( 'wp_enqueue_scripts', 'playon_scripts' );
-
-// Update CSS within in Admin
-	function admin_style() {
-	  wp_enqueue_style('admin-styles', get_template_directory_uri().'/assets/css/admin.css');
-	}
-	add_action('admin_enqueue_scripts', 'admin_style');

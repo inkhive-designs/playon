@@ -12,10 +12,6 @@
             <a href="<?php the_permalink() ?>" title="<?php the_title() ?>"><img alt="<?php the_title() ?>" src="<?php echo get_template_directory_uri()."/assets/images/placeholder2.jpg"; ?>"></a>
         <?php endif; ?>
 
-
-
-
-
         <?php if(  get_post_meta( get_the_ID(),'enable-video', true ) ) :?>
             <div class="img-meta-with-video">
                 <div class="left">

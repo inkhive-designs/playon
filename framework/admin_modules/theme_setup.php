@@ -78,10 +78,6 @@ if ( ! function_exists( 'playon_setup' ) ) :
         //add thumbnail size
         add_image_size('playon-thumb', 542,340, true );
 
-        if(function_exists('add_theme_support')) {
-            add_theme_support('category-thumbnails');
-        }
-
         //Slider Support
         add_theme_support('rt-slider', array( 10 ) );
 
@@ -97,8 +93,8 @@ if ( ! function_exists( 'playon_setup' ) ) :
          * @link https://codex.wordpress.org/Theme_Logo
          */
         add_theme_support( 'custom-logo', array(
-            'height'      => 250,
-            'width'       => 250,
+            'height'      => 72,
+            'width'       => 72,
             'flex-width'  => true,
             'flex-height' => true,
         ) );
